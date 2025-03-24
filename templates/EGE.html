@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Информация{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Задания ЕГЭ</h1>
+    {{ zadaniya|safe }}
+</div>
+
+<style>
+    .image-container {
+        text-align: center; /* Центрируем изображения */
+        margin: 1.5rem 0; /* Отступы сверху и снизу */
+    }
+
+    .content-image {
+        max-width: 100%; /* Ограничиваем максимальную ширину */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
+        border-radius: 10px; /* Закругляем углы изображений */
+    }
+
+    .content-text {
+        margin: 1.5rem 0; /* Отступы для текста */
+        line-height: 1.6; /* Высота строки для лучшей читаемости */
+    }
+</style>
+{% endblock %}

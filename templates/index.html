@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Physics Chatbot{% endblock %}
+
+{% block content %}
+<!-- Контейнер чатбота -->
+<div class="container">
+        <h1><i class="fas fa-atom"></i> Physics AI</h1>
+        <form id="questionForm">
+            <input type="text" id="question" name="question" placeholder="Напиши свой вопрос по физике...">
+            <button type="submit">Спросить у ИИ</button>
+        </form>
+        <div id="answer" style="white-space: pre-wrap;"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('questionForm');
+        const answerDiv = document.getElementById('answer');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const question = document.getElementById('question').value;
+            answerDiv.innerHTML = ''; // Очистка предыдущего ответа
+
+            const eventSource = new EventSource(`/stream?question=${encodeURIComponent(question)}`);
+
+            eventSource.onmessage = function(event) {
+                answerDiv.innerHTML += event.data;
+                if (MathJax.typeset) {
+                    MathJax.typeset([answerDiv]);
+                }
+            };
+
+            eventSource.onerror = function() {
+                eventSource.close();
+            };
+        });
+    </script>
+{% endblock %}

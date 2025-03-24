@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<head>
+  <style>
+        .contact-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 800px; /* Увеличиваем максимальную ширину */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-top: 6rem; /* Отступ для навбара */
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #6a11cb;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-container p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .contact-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 1rem;
+            border: 2px solid #6a11cb;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #2575fc;
+        }
+
+        .contact-form button {
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: #6a11cb;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #2575fc;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .contact-info a {
+            color: #6a11cb;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #2575fc;
+        }
+  </style>
+</head>
+
+<div class="contact-container">
+    <h1>Свяжитесь со мной</h1>
+    <p>Если у вас есть вопросы или предложения, не стесняйтесь заполнить форму ниже:</p>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="email" placeholder="Ваш email" required>
+        <textarea rows="4" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить сообщение</button>
+    </form>
+
+    <div class="contact-info">
+        <h2>Контактная информация</h2>
+        <p>Email: <a href="mailto:garipovfanis1@yandex.ru">garipovfanis1@yandex.ru</a></p>
+        <p>Telegram: <a href="https://t.me/dontcrymygirl" target="_blank">@dontcrymygirl</a></p>
+        <p>Tg-канал(ChemistryPRO): <a href="https://t.me/chemistrypro_off" target="_blank">@chemistrypro_off</a></p>
+        <p>GitHub: <a href="https://github.com/FanisGaripov" target="_blank">github.com/FanisGaripov</a></p>
+    </div>
+</div>
+{% endblock %}

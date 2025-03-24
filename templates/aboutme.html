@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}Physics Chatbot{% endblock %}
+
+{% block content %}
+<head>
+  <style>
+        .about-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            margin-top: 6rem; /* Отступ для навбара */
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        .about-container img {
+            width: 350px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 2rem;
+        }
+
+        .about-container h1 {
+            font-size: 40px;
+            font-family: Andika;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-container p {
+            font-size: 21px;
+            font-family: Andika;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-container a {
+            color: #6a11cb;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .about-container a:hover {
+            color: #2575fc;
+        }
+
+        .github-links {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        .github-links a {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+  </style>
+</head>
+<div class="about-container">
+    <img src="static/fanisik.jpg" alt="Гарипов Фанис">
+    <div>
+        <h1>Обо мне</h1>
+        <p>
+            Привет! Меня зовут Гарипов Фанис. Мне 16 лет. Я увлекаюсь физикой, программированием и созданием интересных проектов.
+            Я разработал этот сайт для работы с искусственным интеллектом в физике.
+        </p>
+        <p>
+            В свободное время я люблю программировать, читать и изучать новые технологии.
+            Если у вас есть вопросы или предложения, не стесняйтесь <a href="/contact">связаться со мной</a>.</p>
+        <p>Спасибо, что посетили мой сайт!</p>
+        <div class="github-links">
+            <p>Мои проекты на GitHub:</p>
+            <a href="https://github.com/FanisGaripov/Word-Memorization-App" target="_blank">Word-Memorization-App</a>
+            <a href="https://github.com/FanisGaripov/ChemistryPro/tree/test" target="_blank">ChemistryPRO</a>
+            <a href="https://github.com/FanisGaripov/ChemistryPRO_TG_VERSION" target="_blank">Telegram-Bot-ChemistryPRO</a>
+            <a href="https://github.com/FanisGaripov/ChemistryPRO-APK" target="_blank">ChemistryPRO-APP+EXE</a>
+            <a href="https://github.com/FanisGaripov/PCCONFIGURATOR-DB" target="_blank">PCCONFIGURATOR-DB</a>
+            <a href="https://github.com/FanisGaripov/PCBUILDERSHOP" target="_blank">PCBUILDERSHOP</a>
+            <a href="https://github.com/FanisGaripov/Snake-game" target="_blank">SnakeGame</a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

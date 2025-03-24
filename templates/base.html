@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>{% block title %}Physics AI{% endblock %}</title>
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --text-color: #333;
+            --light-text: #f8f9fa;
+            --bg-color: #f8f9fa;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --gradient: linear-gradient(135deg, #cc80ff 0%, #a319ff 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background: var(--gradient);
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            color: var(--light-text);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            margin-right: 0.5rem;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--light-text);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--light-text);
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-left: 1.5rem;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light-text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 6rem 2rem 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2.2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        #question {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        button {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #answer {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: var(--shadow);
+            min-height: 50px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--gradient);
+            color: var(--light-text);
+            margin-top: auto;
+        }
+
+        .typing-indicator {
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            margin-right: 3px;
+            opacity: 0.4;
+        }
+
+        .typing-indicator span:nth-child(1) {
+            animation: typing 1s infinite;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation: typing 1s infinite 0.2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation: typing 1s infinite 0.4s;
+        }
+
+        @keyframes typing {
+            0% { opacity: 0.4; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(-5px); }
+            100% { opacity: 0.4; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav {
+                position: fixed;
+                top: 85px;
+                left: -100%;
+                width: 70%;
+                height: calc(100vh - 70px);
+                background: var(--gradient);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+            }
+
+            .navbar-nav.active {
+                left: 0;
+            }
+
+            .nav-item {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .main-content {
+                padding: 5rem 1rem 1rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/physics-chatbot" class="navbar-brand">
+            <i class="fas fa-atom"></i> Physics AI
+        </a>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navbar-nav" id="navbarNav">
+            <li class="nav-item">
+                <a href="/physics-chatbot" class="nav-link"><i class="fas fa-home"></i> Главная</a>
+            </li>
+            <li class="nav-item">
+                <a href="/aboutme" class="nav-link"><i class="fas fa-user"></i> Обо мне</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        {% block content %} {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Physics AI. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navbarNav = document.getElementById('navbarNav');
+
+        hamburger.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+
+
+        // For chat page
+        if (document.getElementById('questionForm')) {
+            const form = document.getElementById('questionForm');
+            const answerDiv = document.getElementById('answer');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const question = document.getElementById('question').value;
+                answerDiv.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
+
+                const eventSource = new EventSource(`/stream?question=${encodeURIComponent(question)}`);
+
+                eventSource.onmessage = function(event) {
+                    if (event.data === "[DONE]") {
+                        eventSource.close();
+                        return;
+                    }
+
+                    const typingIndicator = answerDiv.querySelector('.typing-indicator');
+                    if (typingIndicator) {
+                        answerDiv.removeChild(typingIndicator);
+                    }
+
+                    answerDiv.innerHTML += event.data;
+                    if (MathJax.typeset) {
+                        MathJax.typeset([answerDiv]);
+                    }
+                };
+
+                eventSource.onerror = function() {
+                    eventSource.close();
+                    if (answerDiv.innerHTML === '<div class="typing-indicator"><span></span><span></span><span></span></div>') {
+                        answerDiv.innerHTML = '<p>Произошла какая-то ошибка со стороны сервера. Попробуйте еще раз.</p>';
+                    }
+                };
+            });
+        }
+    </script>
+</body>
+</html>
