@@ -2,3 +2,4 @@ flask
 g4f
 requests
 beautifulsoup4
+gunicorn
