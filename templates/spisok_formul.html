@@ -1,10 +1,5142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}{% endblock %}
+
+{% block content %}
+<main class="main-content">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+    /* Основные стили для контента */
+    .ds-markdown--block {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /* Заголовки */
+    h3 {
+        font-size: 1.8rem;
+        color: #2c3e50;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 0.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        color: #2980b9;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Формулы */
+    .katex-display {
+        margin: 1.5rem 0;
+        padding: 1rem;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    .katex {
+        font-size: 1.2rem !important;
+    }
+
+    /* Таблицы */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+        padding: 12px 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #e6f7ff;
+    }
+
+    /* Горизонтальные линии */
+    hr {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(52, 152, 219, 0.75), rgba(0,0,0,0));
+        margin: 2rem 0;
+    }
+
+    /* Центрирование содержимого */
+    .center-content {
+        text-align: center;
+    }
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+        .ds-markdown--block {
+            padding: 10px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+        }
+
+        th, td {
+            padding: 8px 10px;
+            font-size: 0.9rem;
+        }
+    }
+</style>
+<div class="ds-markdown ds-markdown--block" style="--ds-md-zoom: 1.143;">
+    <h1>Список основных формул по физике</h1>
+<h3>
+<strong>Механика</strong>
+</h3>
+<h4>Кинематика прямолинейного движения</h4>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>s</mi>
+<mi>x</mi>
+</msub>
+<mo>=</mo>
+<mi>x</mi>
+<mo>−</mo>
+<msub>
+<mi>x</mi>
+<mn>0</mn>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">s_x = x - x_0 </annotation>
+</semantics>
+</math>
+</span>
+</span>
+</span>
+<span class="vlist-s">​</span>
+<span class="vlist-r">
+<span class="vlist" style="height:0.15em;">
+<span></span>
+</span>
+</span>
+
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>v</mi>
+<mo>⃗</mo>
+</mover>
+<mo>=</mo>
+<mfrac>
+<mover accent="true">
+<mi>s</mi>
+<mo>⃗</mo>
+</mover>
+<mi>t</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\vec{v} = \frac{\vec{s}}{t} </annotation>
+</semantics>
+</math>
+</span>
+<span style="top:-3.23em;">
+<span class="pstrut" style="height:3em;"></span>
+<span class="frac-line" style="border-bottom-width:0.04em;"></span>
+</span>
+<span style="top:-3.677em;">
+<span class="pstrut" style="height:3em;"></span>
+<span class="mord">
+<span class="mord accent">
+<span class="vlist-t">
+<span class="vlist-r">
+<span class="vlist" style="height:0.714em;">
+</svg>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+<span class="vlist-s">​</span>
+</span>
+<span class="vlist-r">
+<span class="vlist" style="height:0.686em;">
+<span></span>
+</span>
+</span>
+<span class="mclose nulldelimiter"></span>
+
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>v</mi>
+<mrow>
+<mi>c</mi>
+<mi>p</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mi>s</mi>
+<mi>t</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">v_{cp} = \frac{s}{t} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>x</mi>
+<mo>=</mo>
+<msub>
+<mi>x</mi>
+<mn>0</mn>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>v</mi>
+<mi>x</mi>
+</msub>
+<mi>t</mi>
+</mrow>
+<annotation encoding="application/x-tex">x = x_0 + v_x t </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>a</mi>
+<mo>⃗</mo>
+</mover>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mover accent="true">
+<mi>v</mi>
+<mo>⃗</mo>
+</mover>
+<mo>−</mo>
+<msub>
+<mover accent="true">
+<mi>v</mi>
+<mo>⃗</mo>
+</mover>
+<mn>0</mn>
+</msub>
+</mrow>
+<mi>t</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\vec{a} = \frac{\vec{v} - \vec{v}_0}{t} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>v</mi>
+<mo>⃗</mo>
+</mover>
+<mo>=</mo>
+<msub>
+<mover accent="true">
+<mi>v</mi>
+<mo>⃗</mo>
+</mover>
+<mn>0</mn>
+</msub>
+<mo>+</mo>
+<mover accent="true">
+<mi>a</mi>
+<mo>⃗</mo>
+</mover>
+<mi>t</mi>
+</mrow>
+<annotation encoding="application/x-tex">\vec{v} = \vec{v}_0 + \vec{a}t </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>s</mi>
+<mo>⃗</mo>
+</mover>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mover accent="true">
+<mi>v</mi>
+<mo>⃗</mo>
+</mover>
+<mo>+</mo>
+<msub>
+<mover accent="true">
+<mi>v</mi>
+<mo>⃗</mo>
+</mover>
+<mn>0</mn>
+</msub>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mi>t</mi>
+</mrow>
+<annotation encoding="application/x-tex">\vec{s} = \frac{\vec{v} + \vec{v}_0}{2} t </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>s</mi>
+<mo>⃗</mo>
+</mover>
+<mo>=</mo>
+<msub>
+<mover accent="true">
+<mi>v</mi>
+<mo>⃗</mo>
+</mover>
+<mn>0</mn>
+</msub>
+<mi>t</mi>
+<mo>+</mo>
+<mfrac>
+<mrow>
+<mover accent="true">
+<mi>a</mi>
+<mo>⃗</mo>
+</mover>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\vec{s} = \vec{v}_0 t + \frac{\vec{a}t^2}{2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>s</mi>
+<mi>x</mi>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msubsup>
+<mi>v</mi>
+<mi>x</mi>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo>
+<msubsup>
+<mi>v</mi>
+<mn>0</mn>
+<mn>2</mn>
+</msubsup>
+</mrow>
+<mrow>
+<mn>2</mn>
+<msub>
+<mi>a</mi>
+<mi>x</mi>
+</msub>
+</mrow>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">s_x = \frac{v_x^2 - v_0^2}{2a_x} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>x</mi>
+<mo>=</mo>
+<msub>
+<mi>x</mi>
+<mn>0</mn>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>v</mi>
+<mn>0</mn>
+</msub>
+<mi>t</mi>
+<mo>+</mo>
+<mfrac>
+<mrow>
+<mi>a</mi>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">x = x_0 + v_0 t + \frac{at^2}{2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<h4>Кинематика криволинейного движения</h4>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>v</mi>
+<mo>=</mo>
+<mfrac>
+<mi>N</mi>
+<mi>t</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">v = \frac{N}{t} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>T</mi>
+<mo>=</mo>
+<mfrac>
+<mi>t</mi>
+<mi>N</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">T = \frac{t}{N} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>T</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mi>v</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">T = \frac{1}{v} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>v</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>2</mn>
+<mi>π</mi>
+<mi>r</mi>
+</mrow>
+<mi>T</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">v = \frac{2\pi r}{T} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>v</mi>
+<mo>=</mo>
+<mn>2</mn>
+<mi>π</mi>
+<mi>r</mi>
+<mi>v</mi>
+</mrow>
+<annotation encoding="application/x-tex">v = 2\pi r v </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>ω</mi>
+<mo>=</mo>
+<mfrac>
+<mi>φ</mi>
+<mi>t</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\omega = \frac{\varphi}{t} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>ω</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>2</mn>
+<mi>π</mi>
+</mrow>
+<mi>T</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\omega = \frac{2\pi}{T} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>ω</mi>
+<mo>=</mo>
+<mn>2</mn>
+<mi>π</mi>
+<mi>v</mi>
+</mrow>
+<annotation encoding="application/x-tex">\omega = 2\pi v </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>v</mi>
+<mo>=</mo>
+<mi>ω</mi>
+<mi>r</mi>
+</mrow>
+<annotation encoding="application/x-tex">v = \omega r </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>a</mi>
+<mo>=</mo>
+<mfrac>
+<msup>
+<mi>v</mi>
+<mn>2</mn>
+</msup>
+<mi>r</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">a = \frac{v^2}{r} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>a</mi>
+<mo>=</mo>
+<msup>
+<mi>ω</mi>
+<mn>2</mn>
+</msup>
+<mi>r</mi>
+</mrow>
+<annotation encoding="application/x-tex">a = \omega^2 r </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<h4>Динамика</h4>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>a</mi>
+<mo>ˉ</mo>
+</mover>
+<mo>=</mo>
+<mfrac>
+<msub>
+<mover accent="true">
+<mi>F</mi>
+<mo>ˉ</mo>
+</mover>
+<mi>R</mi>
+</msub>
+<mi>m</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\bar{a} = \frac{\bar{F}_R}{m} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mover accent="true">
+<mi>F</mi>
+<mo>ˉ</mo>
+</mover>
+<mn>1</mn>
+</msub>
+<mo>=</mo>
+<mo>−</mo>
+<msub>
+<mover accent="true">
+<mi>F</mi>
+<mo>ˉ</mo>
+</mover>
+<mn>2</mn>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">\bar{F}_1 = -\bar{F}_2 </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>F</mi>
+<mrow>
+<mi>m</mi>
+<mi>p</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mi>μ</mi>
+<mi>N</mi>
+</mrow>
+<annotation encoding="application/x-tex">F_{mp} = \mu N </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>F</mi>
+<mrow>
+<mi>y</mi>
+<mi>m</mi>
+<mi>p</mi>
+<mi>x</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mo>−</mo>
+<mi>k</mi>
+<mi>x</mi>
+</mrow>
+<annotation encoding="application/x-tex">F_{ympx} = -kx </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>F</mi>
+<mo>ˉ</mo>
+</mover>
+<mo>=</mo>
+<mi>m</mi>
+<mover accent="true">
+<mi>g</mi>
+<mo>ˉ</mo>
+</mover>
+</mrow>
+<annotation encoding="application/x-tex">\bar{F} = m\bar{g} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>P</mi>
+<mo>ˉ</mo>
+</mover>
+<mo>=</mo>
+<mi>m</mi>
+<mover accent="true">
+<mi>g</mi>
+<mo>ˉ</mo>
+</mover>
+</mrow>
+<annotation encoding="application/x-tex">\bar{P} = m\bar{g} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>P</mi>
+<mo>ˉ</mo>
+</mover>
+<mo>=</mo>
+<mi>m</mi>
+<mo stretchy="false">(</mo>
+<mover accent="true">
+<mi>g</mi>
+<mo>ˉ</mo>
+</mover>
+<mo>−</mo>
+<mover accent="true">
+<mi>a</mi>
+<mo>ˉ</mo>
+</mover>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">\bar{P} = m(\bar{g} - \bar{a}) </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>F</mi>
+<mo>=</mo>
+<mi>G</mi>
+<mfrac>
+<mrow>
+<msub>
+<mi>m</mi>
+<mn>1</mn>
+</msub>
+<msub>
+<mi>m</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">F = G\frac{m_1m_2}{r^2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>g</mi>
+<mo>=</mo>
+<mi>G</mi>
+<mfrac>
+<mi>M</mi>
+<mrow>
+<mo stretchy="false">(</mo>
+<mi>R</mi>
+<mo>+</mo>
+<mi>h</mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">g = G\frac{M}{(R + h)^2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>v</mi>
+<mo>=</mo>
+<msqrt>
+<mrow>
+<mi>G</mi>
+<mfrac>
+<mi>M</mi>
+<mi>R</mi>
+</mfrac>
+</mrow>
+</msqrt>
+</mrow>
+<annotation encoding="application/x-tex">v = \sqrt{G\frac{M}{R}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mover accent="true">
+<mi>F</mi>
+<mo>ˉ</mo>
+</mover>
+<mi>t</mi>
+<mo>=</mo>
+<mi>m</mi>
+<mover accent="true">
+<mi>v</mi>
+<mo>ˉ</mo>
+</mover>
+<mo>−</mo>
+<mi>m</mi>
+<msub>
+<mover accent="true">
+<mi>v</mi>
+<mo>ˉ</mo>
+</mover>
+<mn>0</mn>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">\bar{F}t = m\bar{v} - m\bar{v}_0 </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>m</mi>
+<mn>1</mn>
+</msub>
+<msub>
+<mover accent="true">
+<mi>v</mi>
+<mo>ˉ</mo>
+</mover>
+<mn>1</mn>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>m</mi>
+<mn>2</mn>
+</msub>
+<msub>
+<mover accent="true">
+<mi>v</mi>
+<mo>ˉ</mo>
+</mover>
+<mn>2</mn>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>m</mi>
+<mn>1</mn>
+</msub>
+<msubsup>
+<mover accent="true">
+<mi>v</mi>
+<mo>ˉ</mo>
+</mover>
+<mn>1</mn>
+<mo lspace="0em" mathvariant="normal" rspace="0em">′</mo>
+</msubsup>
+<mo>+</mo>
+<msub>
+<mi>m</mi>
+<mn>2</mn>
+</msub>
+<msubsup>
+<mover accent="true">
+<mi>v</mi>
+<mo>ˉ</mo>
+</mover>
+<mn>2</mn>
+<mo lspace="0em" mathvariant="normal" rspace="0em">′</mo>
+</msubsup>
+</mrow>
+<annotation encoding="application/x-tex">m_1\bar{v}_1 + m_2\bar{v}_2 = m_1\bar{v}_1' + m_2\bar{v}_2' </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<h4>Статика</h4>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>M</mi>
+<mo>=</mo>
+<mi>F</mi>
+<mo>⋅</mo>
+<mi>d</mi>
+</mrow>
+<annotation encoding="application/x-tex">M = F \cdot d </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<munderover>
+<mo>∑</mo>
+<mrow>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mi>n</mi>
+</munderover>
+<msub>
+<mover accent="true">
+<mi>F</mi>
+<mo>ˉ</mo>
+</mover>
+<mi>i</mi>
+</msub>
+<mo>=</mo>
+<mn>0</mn>
+</mrow>
+<annotation encoding="application/x-tex">\sum_{i=1}^n \bar{F}_i = 0 </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<munderover>
+<mo>∑</mo>
+<mrow>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mi>n</mi>
+</munderover>
+<msub>
+<mi>M</mi>
+<mi>i</mi>
+</msub>
+<mo>=</mo>
+<mn>0</mn>
+</mrow>
+<annotation encoding="application/x-tex">\sum_{i=1}^n M_i = 0 </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Гидростатика</strong>
+</h3>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>ρ</mi>
+<mo>=</mo>
+<mfrac>
+<mi>m</mi>
+<mi>V</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\rho = \frac{m}{V} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>p</mi>
+<mo>=</mo>
+<mfrac>
+<mi>F</mi>
+<mi>S</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">p = \frac{F}{S} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>p</mi>
+<mo>=</mo>
+<mi>ρ</mi>
+<mi>g</mi>
+<mi>h</mi>
+</mrow>
+<annotation encoding="application/x-tex">p = \rho gh </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>F</mi>
+<mtext>оло</mtext>
+</msub>
+<mo>=</mo>
+<mi>ρ</mi>
+<mi>g</mi>
+<mi>H</mi>
+<msub>
+<mi>S</mi>
+<mtext>оло</mtext>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">F_{\text{оло}} = \rho gHS_{\text{оло}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>F</mi>
+<mtext>бок</mtext>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>ρ</mi>
+<mi>g</mi>
+<mi>H</mi>
+<msub>
+<mi>S</mi>
+<mtext>бок</mtext>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">F_{\text{бок}} = \frac{1}{2} \rho gHS_{\text{бок}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mfrac>
+<msub>
+<mi>h</mi>
+<mn>1</mn>
+</msub>
+<msub>
+<mi>h</mi>
+<mn>2</mn>
+</msub>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<msub>
+<mi>ρ</mi>
+<mn>2</mn>
+</msub>
+<msub>
+<mi>ρ</mi>
+<mn>1</mn>
+</msub>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\frac{h_1}{h_2} = \frac{\rho_2}{\rho_1} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>F</mi>
+<mi>A</mi>
+</msub>
+<mo>=</mo>
+<mi>ρ</mi>
+<mi>g</mi>
+<mi>V</mi>
+</mrow>
+<annotation encoding="application/x-tex">F_A = \rho gV </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>F</mi>
+<mn>2</mn>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>F</mi>
+<mn>1</mn>
+</msub>
+<mfrac>
+<msub>
+<mi>S</mi>
+<mn>2</mn>
+</msub>
+<msub>
+<mi>S</mi>
+<mn>1</mn>
+</msub>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">F_2 = F_1 \frac{S_2}{S_1} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Работа, энергия, мощность</strong>
+</h3>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mi>F</mi>
+<mo>⋅</mo>
+<mi>s</mi>
+<mo>⋅</mo>
+<mi>cos</mi>
+<mo>⁡</mo>
+<mi>α</mi>
+</mrow>
+<annotation encoding="application/x-tex">A = F \cdot s \cdot \cos \alpha </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mo>−</mo>
+<msub>
+<mi>F</mi>
+<mrow>
+<mi>m</mi>
+<mi>p</mi>
+</mrow>
+</msub>
+<mo>⋅</mo>
+<mi>s</mi>
+</mrow>
+<annotation encoding="application/x-tex">A = -F_{mp} \cdot s </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mi>m</mi>
+<mi>g</mi>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>h</mi>
+<mn>1</mn>
+</msub>
+<mo>−</mo>
+<msub>
+<mi>h</mi>
+<mn>2</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">A = mg(h_1 - h_2) </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mfrac>
+<mi>k</mi>
+<mn>2</mn>
+</mfrac>
+<mo stretchy="false">(</mo>
+<msubsup>
+<mi>x</mi>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo>
+<msubsup>
+<mi>x</mi>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">A = \frac{k}{2}(x_1^2 - x_2^2) </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>N</mi>
+<mo>=</mo>
+<mi>F</mi>
+<mo>⋅</mo>
+<mi>o</mi>
+</mrow>
+<annotation encoding="application/x-tex">N = F \cdot o </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>N</mi>
+<mo>=</mo>
+<mfrac>
+<mi>A</mi>
+<mi>t</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">N = \frac{A}{t} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>E</mi>
+<mi>k</mi>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>m</mi>
+<msup>
+<mi>v</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">E_k = \frac{mv^2}{2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>E</mi>
+<mi>p</mi>
+</msub>
+<mo>=</mo>
+<mi>m</mi>
+<mi>g</mi>
+<mi>h</mi>
+</mrow>
+<annotation encoding="application/x-tex">E_p = mgh </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>E</mi>
+<mi>p</mi>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>k</mi>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">E_p = \frac{kx^2}{2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>E</mi>
+<mo>=</mo>
+<msub>
+<mi>E</mi>
+<mi>k</mi>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>E</mi>
+<mi>p</mi>
+</msub>
+<mo>=</mo>
+<mtext>const</mtext>
+</mrow>
+<annotation encoding="application/x-tex">E = E_k + E_p = \text{const} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>m</mi>
+<msubsup>
+<mi>v</mi>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>−</mo>
+<mfrac>
+<mrow>
+<mi>m</mi>
+<msubsup>
+<mi>v</mi>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">A = \frac{mv_2^2}{2} - \frac{mv_1^2}{2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>η</mi>
+<mo>=</mo>
+<mfrac>
+<msub>
+<mi>A</mi>
+<mi>n</mi>
+</msub>
+<mi>A</mi>
+</mfrac>
+<mo separator="true">,</mo>
+<mi>η</mi>
+<mo>=</mo>
+<mfrac>
+<msub>
+<mi>N</mi>
+<mi>n</mi>
+</msub>
+<mi>N</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\eta = \frac{A_n}{A}, \eta = \frac{N_n}{N} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Колебания и волны</strong>
+</h3>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>x</mi>
+<mo>=</mo>
+<mi>A</mi>
+<mi>sin</mi>
+<mo>⁡</mo>
+<mo stretchy="false">(</mo>
+<mi>ω</mi>
+<mi>t</mi>
+<mo>+</mo>
+<msub>
+<mi>φ</mi>
+<mn>0</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">x = A \sin(\omega t + \varphi_0) </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>v</mi>
+<mi>x</mi>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>v</mi>
+<mi>m</mi>
+</msub>
+<mi>cos</mi>
+<mo>⁡</mo>
+<mo stretchy="false">(</mo>
+<mi>ω</mi>
+<mi>t</mi>
+<mo>+</mo>
+<msub>
+<mi>φ</mi>
+<mn>0</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">v_x = v_m \cos(\omega t + \varphi_0) </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>a</mi>
+<mi>x</mi>
+</msub>
+<mo>=</mo>
+<mo>−</mo>
+<msub>
+<mi>a</mi>
+<mi>m</mi>
+</msub>
+<mi>sin</mi>
+<mo>⁡</mo>
+<mo stretchy="false">(</mo>
+<mi>ω</mi>
+<mi>t</mi>
+<mo>+</mo>
+<msub>
+<mi>φ</mi>
+<mn>0</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">a_x = -a_m \sin(\omega t + \varphi_0) </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>ω</mi>
+<mo>=</mo>
+<mn>2</mn>
+<mi>π</mi>
+<mi>v</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>2</mn>
+<mi>π</mi>
+</mrow>
+<mi>T</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\omega = 2\pi v = \frac{2\pi}{T} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>T</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mi>v</mi>
+</mfrac>
+<mo separator="true">,</mo>
+<mi>v</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mi>T</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">T = \frac{1}{v}, v = \frac{1}{T} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>v</mi>
+<mi>m</mi>
+</msub>
+<mo>=</mo>
+<mi>ω</mi>
+<mi>A</mi>
+</mrow>
+<annotation encoding="application/x-tex">v_m = \omega A </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>a</mi>
+<mi>m</mi>
+</msub>
+<mo>=</mo>
+<mo>−</mo>
+<msup>
+<mi>ω</mi>
+<mn>2</mn>
+</msup>
+<mi>A</mi>
+</mrow>
+<annotation encoding="application/x-tex">a_m = -\omega^2 A </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>T</mi>
+<mo>=</mo>
+<mn>2</mn>
+<mi>π</mi>
+<msqrt>
+<mfrac>
+<mi>m</mi>
+<mi>k</mi>
+</mfrac>
+</msqrt>
+</mrow>
+<annotation encoding="application/x-tex">T = 2\pi \sqrt{\frac{m}{k}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>T</mi>
+<mo>=</mo>
+<mn>2</mn>
+<mi>π</mi>
+<msqrt>
+<mfrac>
+<mi>l</mi>
+<mi>g</mi>
+</mfrac>
+</msqrt>
+</mrow>
+<annotation encoding="application/x-tex">T = 2\pi \sqrt{\frac{l}{g}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mfrac>
+<mrow>
+<mi>k</mi>
+<msup>
+<mi>A</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>m</mi>
+<msubsup>
+<mi>v</mi>
+<mi>x</mi>
+<mn>2</mn>
+</msubsup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mrow>
+<mi>k</mi>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>m</mi>
+<msubsup>
+<mi>v</mi>
+<mi>m</mi>
+<mn>2</mn>
+</msubsup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\frac{kA^2}{2} = \frac{mv_x^2}{2} + \frac{kx^2}{2} = \frac{mv_m^2}{2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>λ</mi>
+<mo>=</mo>
+<mi>v</mi>
+<mi>T</mi>
+</mrow>
+<annotation encoding="application/x-tex">\lambda = vT </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Молекулярная физика</strong>
+</h3>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>v</mi>
+<mo>=</mo>
+<mfrac>
+<mi>N</mi>
+<msub>
+<mi>N</mi>
+<mi>A</mi>
+</msub>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<mi>m</mi>
+<mi>M</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">v = \frac{N}{N_A} = \frac{m}{M} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>M</mi>
+<mo>=</mo>
+<msub>
+<mi>m</mi>
+<mn>0</mn>
+</msub>
+<msub>
+<mi>N</mi>
+<mi>A</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">M = m_0 N_A </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>p</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mi>n</mi>
+<msub>
+<mi>m</mi>
+<mn>0</mn>
+</msub>
+<msup>
+<mover accent="true">
+<mi>v</mi>
+<mo>ˉ</mo>
+</mover>
+<mn>2</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">p = \frac{1}{3} nm_0 \bar{v}^2 </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>p</mi>
+<mo>=</mo>
+<mfrac>
+<mn>2</mn>
+<mn>3</mn>
+</mfrac>
+<mi>n</mi>
+<mi>E</mi>
+</mrow>
+<annotation encoding="application/x-tex">p = \frac{2}{3} nE </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>p</mi>
+<mo>=</mo>
+<mi>n</mi>
+<mi>k</mi>
+<mi>T</mi>
+</mrow>
+<annotation encoding="application/x-tex">p = nkT </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>E</mi>
+<mo>=</mo>
+<mfrac>
+<mn>3</mn>
+<mn>2</mn>
+</mfrac>
+<mi>k</mi>
+<mi>T</mi>
+</mrow>
+<annotation encoding="application/x-tex">E = \frac{3}{2} kT </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>v</mi>
+<mo>=</mo>
+<msqrt>
+<mfrac>
+<mrow>
+<mn>3</mn>
+<mi>R</mi>
+<mi>T</mi>
+</mrow>
+<mi>M</mi>
+</mfrac>
+</msqrt>
+</mrow>
+<annotation encoding="application/x-tex">v = \sqrt{\frac{3RT}{M}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mfrac>
+<mrow>
+<mi>p</mi>
+<mi>V</mi>
+</mrow>
+<mi>T</mi>
+</mfrac>
+<mo>=</mo>
+<mtext>const</mtext>
+</mrow>
+<annotation encoding="application/x-tex">\frac{pV}{T} = \text{const} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>p</mi>
+<mi>V</mi>
+<mo>=</mo>
+<mfrac>
+<mi>m</mi>
+<mi>M</mi>
+</mfrac>
+<mi>R</mi>
+<mi>T</mi>
+</mrow>
+<annotation encoding="application/x-tex">pV = \frac{m}{M} RT </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>p</mi>
+<mi>V</mi>
+<mo>=</mo>
+<mtext>const  (при  </mtext>
+<mi>T</mi>
+<mo>=</mo>
+<mtext>const)</mtext>
+</mrow>
+<annotation encoding="application/x-tex">pV = \text{const (при } T = \text{const)} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mfrac>
+<mi>V</mi>
+<mi>T</mi>
+</mfrac>
+<mo>=</mo>
+<mtext>const  (при  </mtext>
+<mi>p</mi>
+<mo>=</mo>
+<mtext>const)</mtext>
+</mrow>
+<annotation encoding="application/x-tex">\frac{V}{T} = \text{const (при } p = \text{const)} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mfrac>
+<mi>p</mi>
+<mi>T</mi>
+</mfrac>
+<mo>=</mo>
+<mtext>const  (при  </mtext>
+<mi>V</mi>
+<mo>=</mo>
+<mtext>const)</mtext>
+</mrow>
+<annotation encoding="application/x-tex">\frac{p}{T} = \text{const (при } V = \text{const)} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Термодинамика</strong>
+</h3>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>U</mi>
+<mo>=</mo>
+<mfrac>
+<mi>i</mi>
+<mn>2</mn>
+</mfrac>
+<mfrac>
+<mi>m</mi>
+<mi>M</mi>
+</mfrac>
+<mi>R</mi>
+<mi>T</mi>
+</mrow>
+<annotation encoding="application/x-tex">U = \frac{i}{2} \frac{m}{M} RT </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>Q</mi>
+<mo>=</mo>
+<mi>c</mi>
+<mi>m</mi>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>t</mi>
+<mn>2</mn>
+</msub>
+<mo>−</mo>
+<msub>
+<mi>t</mi>
+<mn>1</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">Q = cm(t_2 - t_1) </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>C</mi>
+<mo>=</mo>
+<mi>c</mi>
+<mi>m</mi>
+</mrow>
+<annotation encoding="application/x-tex">C = cm </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>Q</mi>
+<mi>n</mi>
+</msub>
+<mo>=</mo>
+<mi>r</mi>
+<mi>m</mi>
+</mrow>
+<annotation encoding="application/x-tex">Q_n = rm </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>Q</mi>
+<mrow>
+<mi>n</mi>
+<mtext>л</mtext>
+</mrow>
+</msub>
+<mo>=</mo>
+<mi>λ</mi>
+<mi>m</mi>
+</mrow>
+<annotation encoding="application/x-tex">Q_{nл} = \lambda m </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>Q</mi>
+<mrow>
+<mi>c</mi>
+<mi>c</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mo>−</mo>
+<mi>q</mi>
+<mi>m</mi>
+</mrow>
+<annotation encoding="application/x-tex">Q_{cc} = -qm </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msup>
+<mi>A</mi>
+<mo lspace="0em" mathvariant="normal" rspace="0em">′</mo>
+</msup>
+<mo>=</mo>
+<mi>p</mi>
+<mi>A</mi>
+<mi>V</mi>
+</mrow>
+<annotation encoding="application/x-tex">A' = pAV </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>Q</mi>
+<mo>=</mo>
+<mi>A</mi>
+<mi>U</mi>
+<mo>+</mo>
+<msup>
+<mi>A</mi>
+<mo lspace="0em" mathvariant="normal" rspace="0em">′</mo>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">Q = AU + A' </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<munderover>
+<mo>∑</mo>
+<mrow>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mi>n</mi>
+</munderover>
+<msub>
+<mi>Q</mi>
+<mi>i</mi>
+</msub>
+<mo>=</mo>
+<mn>0</mn>
+</mrow>
+<annotation encoding="application/x-tex">\sum_{i=1}^n Q_i = 0 </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>η</mi>
+<mo>=</mo>
+<mfrac>
+<msup>
+<mi>A</mi>
+<mo lspace="0em" mathvariant="normal" rspace="0em">′</mo>
+</msup>
+<msub>
+<mi>Q</mi>
+<mn>1</mn>
+</msub>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msub>
+<mi>Q</mi>
+<mn>1</mn>
+</msub>
+<mo>−</mo>
+<msub>
+<mi>Q</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+<msub>
+<mi>Q</mi>
+<mn>1</mn>
+</msub>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\eta = \frac{A'}{Q_1} = \frac{Q_1 - Q_2}{Q_1} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>η</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msub>
+<mi>T</mi>
+<mn>1</mn>
+</msub>
+<mo>−</mo>
+<msub>
+<mi>T</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+<msub>
+<mi>T</mi>
+<mn>1</mn>
+</msub>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\eta = \frac{T_1 - T_2}{T_1} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Электродинамика</strong>
+</h3>
+<h4>Электростатика</h4>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>F</mi>
+<mo>=</mo>
+<mi>k</mi>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">∣</mi>
+<msub>
+<mi>q</mi>
+<mn>1</mn>
+</msub>
+<msub>
+<mi>q</mi>
+<mn>2</mn>
+</msub>
+<mi mathvariant="normal">∣</mi>
+</mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">F = k \frac{|q_1 q_2|}{r^2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>E</mi>
+<mo>=</mo>
+<mfrac>
+<mi>F</mi>
+<mi>q</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">E = \frac{F}{q} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>E</mi>
+<mo>=</mo>
+<mi>k</mi>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">∣</mi>
+<mi>q</mi>
+<mi mathvariant="normal">∣</mi>
+</mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">E = k \frac{|q|}{r^2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>φ</mi>
+<mo>=</mo>
+<mfrac>
+<mi>W</mi>
+<mi>q</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\varphi = \frac{W}{q} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>φ</mi>
+<mo>=</mo>
+<mi>k</mi>
+<mfrac>
+<mi>q</mi>
+<mi>r</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\varphi = k \frac{q}{r} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mi>q</mi>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>φ</mi>
+<mn>1</mn>
+</msub>
+<mo>−</mo>
+<msub>
+<mi>φ</mi>
+<mn>2</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">A = q(\varphi_1 - \varphi_2) </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>E</mi>
+<mo>=</mo>
+<mo>−</mo>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mi>φ</mi>
+</mrow>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mi>l</mi>
+</mrow>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">E = -\frac{\Delta \varphi}{\Delta l} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>W</mi>
+<mo>=</mo>
+<mi>k</mi>
+<mfrac>
+<mrow>
+<msub>
+<mi>q</mi>
+<mn>1</mn>
+</msub>
+<msub>
+<mi>q</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+<mi>r</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">W = k \frac{q_1 q_2}{r} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>C</mi>
+<mo>=</mo>
+<mfrac>
+<mi>q</mi>
+<mi>U</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">C = \frac{q}{U} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>C</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>ε</mi>
+<msub>
+<mi>ε</mi>
+<mn>0</mn>
+</msub>
+<mi>S</mi>
+</mrow>
+<mi>d</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">C = \frac{\varepsilon \varepsilon_0 S}{d} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>C</mi>
+<mo>=</mo>
+<munderover>
+<mo>∑</mo>
+<mrow>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mi>n</mi>
+</munderover>
+<msub>
+<mi>C</mi>
+<mi>i</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">C = \sum_{i=1}^n C_i </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mi>C</mi>
+</mfrac>
+<mo>=</mo>
+<munderover>
+<mo>∑</mo>
+<mrow>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mi>n</mi>
+</munderover>
+<mfrac>
+<mn>1</mn>
+<msub>
+<mi>C</mi>
+<mi>i</mi>
+</msub>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\frac{1}{C} = \sum_{i=1}^n \frac{1}{C_i} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>W</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>q</mi>
+<mi>U</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>C</mi>
+<msup>
+<mi>U</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<msup>
+<mi>q</mi>
+<mn>2</mn>
+</msup>
+<mrow>
+<mn>2</mn>
+<mi>C</mi>
+</mrow>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">W = \frac{qU}{2} = \frac{CU^2}{2} = \frac{q^2}{2C} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<h4>Постоянный ток</h4>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>I</mi>
+<mo>=</mo>
+<mfrac>
+<mi>q</mi>
+<mi>t</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">I = \frac{q}{t} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>I</mi>
+<mo>=</mo>
+<msub>
+<mi>q</mi>
+<mn>0</mn>
+</msub>
+<mi>n</mi>
+<mi>v</mi>
+<mi>S</mi>
+</mrow>
+<annotation encoding="application/x-tex">I = q_0 n v S </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>j</mi>
+<mo>=</mo>
+<mfrac>
+<mi>I</mi>
+<mi>S</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">j = \frac{I}{S} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>I</mi>
+<mo>=</mo>
+<mfrac>
+<mi>U</mi>
+<mi>R</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">I = \frac{U}{R} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>R</mi>
+<mo>=</mo>
+<mi>ρ</mi>
+<mfrac>
+<mi>l</mi>
+<mi>S</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">R = \rho \frac{l}{S} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>R</mi>
+<mo>=</mo>
+<msub>
+<mi>R</mi>
+<mn>0</mn>
+</msub>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mi>α</mi>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">R = R_0 (1 + \alpha t) </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>R</mi>
+<mo>=</mo>
+<munderover>
+<mo>∑</mo>
+<mrow>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mi>n</mi>
+</munderover>
+<msub>
+<mi>R</mi>
+<mi>i</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">R = \sum_{i=1}^n R_i </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mi>R</mi>
+</mfrac>
+<mo>=</mo>
+<munderover>
+<mo>∑</mo>
+<mrow>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mi>n</mi>
+</munderover>
+<mfrac>
+<mn>1</mn>
+<msub>
+<mi>R</mi>
+<mi>i</mi>
+</msub>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\frac{1}{R} = \sum_{i=1}^n \frac{1}{R_i} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mi>I</mi>
+<mi>U</mi>
+<mi>t</mi>
+<mo>=</mo>
+<msup>
+<mi>I</mi>
+<mn>2</mn>
+</msup>
+<mi>R</mi>
+<mi>t</mi>
+<mo>=</mo>
+<mfrac>
+<msup>
+<mi>U</mi>
+<mn>2</mn>
+</msup>
+<mi>R</mi>
+</mfrac>
+<mi>t</mi>
+</mrow>
+<annotation encoding="application/x-tex">A = I U t = I^2 R t = \frac{U^2}{R} t </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>P</mi>
+<mo>=</mo>
+<mfrac>
+<mi>A</mi>
+<mi>t</mi>
+</mfrac>
+<mo>=</mo>
+<mi>I</mi>
+<mi>U</mi>
+<mo>=</mo>
+<msup>
+<mi>I</mi>
+<mn>2</mn>
+</msup>
+<mi>R</mi>
+<mo>=</mo>
+<mfrac>
+<msup>
+<mi>U</mi>
+<mn>2</mn>
+</msup>
+<mi>R</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">P = \frac{A}{t} = I U = I^2 R = \frac{U^2}{R} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>Q</mi>
+<mo>=</mo>
+<msup>
+<mi>I</mi>
+<mn>2</mn>
+</msup>
+<mi>R</mi>
+<mi>t</mi>
+</mrow>
+<annotation encoding="application/x-tex">Q = I^2 R t </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<h4>Магнитное поле</h4>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>F</mi>
+<mo>=</mo>
+<mi>I</mi>
+<mi>B</mi>
+<mi>l</mi>
+<mi>sin</mi>
+<mo>⁡</mo>
+<mi>α</mi>
+</mrow>
+<annotation encoding="application/x-tex">F = I B l \sin \alpha </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>F</mi>
+<mo>=</mo>
+<mi mathvariant="normal">∣</mi>
+<mi>q</mi>
+<mi mathvariant="normal">∣</mi>
+<mi>v</mi>
+<mi>B</mi>
+<mi>sin</mi>
+<mo>⁡</mo>
+<mi>α</mi>
+</mrow>
+<annotation encoding="application/x-tex">F = |q| v B \sin \alpha </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>m</mi>
+<mi>v</mi>
+<mo>=</mo>
+<mi>q</mi>
+<mi>B</mi>
+<mi>R</mi>
+</mrow>
+<annotation encoding="application/x-tex">m v = q B R </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi mathvariant="normal">Φ</mi>
+<mo>=</mo>
+<mi>B</mi>
+<mi>S</mi>
+<mi>cos</mi>
+<mo>⁡</mo>
+<mi>α</mi>
+</mrow>
+<annotation encoding="application/x-tex">\Phi = B S \cos \alpha </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi mathvariant="script">E</mi>
+<mi>i</mi>
+</msub>
+<mo>=</mo>
+<mo>−</mo>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mi mathvariant="normal">Φ</mi>
+</mrow>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mi>t</mi>
+</mrow>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\mathcal{E}_i = -\frac{\Delta \Phi}{\Delta t} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi mathvariant="normal">Φ</mi>
+<mo>=</mo>
+<mi>L</mi>
+<mi>I</mi>
+</mrow>
+<annotation encoding="application/x-tex">\Phi = L I </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi mathvariant="script">E</mi>
+<mi>m</mi>
+</msub>
+<mo>=</mo>
+<mi>ω</mi>
+<msub>
+<mi mathvariant="normal">Φ</mi>
+<mi>m</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">\mathcal{E}_m = \omega \Phi_m </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi mathvariant="script">E</mi>
+<mrow>
+<mi>i</mi>
+<mi>s</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mo>−</mo>
+<mi>L</mi>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mi>I</mi>
+</mrow>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mi>t</mi>
+</mrow>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\mathcal{E}_{is} = -L \frac{\Delta I}{\Delta t} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi mathvariant="script">E</mi>
+<mo>=</mo>
+<mi>B</mi>
+<mi>v</mi>
+<mi>l</mi>
+<mi>sin</mi>
+<mo>⁡</mo>
+<mi>α</mi>
+</mrow>
+<annotation encoding="application/x-tex">\mathcal{E} = B v l \sin \alpha </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>q</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mi mathvariant="normal">Φ</mi>
+</mrow>
+<mi>R</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">q = \frac{\Delta \Phi}{R} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Оптика</strong>
+</h3>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mfrac>
+<mrow>
+<mi>sin</mi>
+<mo>⁡</mo>
+<mi>α</mi>
+</mrow>
+<mrow>
+<mi>sin</mi>
+<mo>⁡</mo>
+<mi>β</mi>
+</mrow>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<msub>
+<mi>n</mi>
+<mn>2</mn>
+</msub>
+<msub>
+<mi>n</mi>
+<mn>1</mn>
+</msub>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<msub>
+<mi>v</mi>
+<mn>1</mn>
+</msub>
+<msub>
+<mi>v</mi>
+<mn>2</mn>
+</msub>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\frac{\sin \alpha}{\sin \beta} = \frac{n_2}{n_1} = \frac{v_1}{v_2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>n</mi>
+<mo>=</mo>
+<mfrac>
+<mi>c</mi>
+<mi>v</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">n = \frac{c}{v} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mo>±</mo>
+<mfrac>
+<mn>1</mn>
+<mi>F</mi>
+</mfrac>
+<mo>=</mo>
+<mo>±</mo>
+<mfrac>
+<mn>1</mn>
+<mi>f</mi>
+</mfrac>
+<mo>±</mo>
+<mfrac>
+<mn>1</mn>
+<mi>d</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\pm \frac{1}{F} = \pm \frac{1}{f} \pm \frac{1}{d} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>D</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mi>F</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">D = \frac{1}{F} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi mathvariant="normal">Γ</mi>
+<mo>=</mo>
+<mfrac>
+<mi>H</mi>
+<mi>h</mi>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<mi>f</mi>
+<mi>d</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\Gamma = \frac{H}{h} = \frac{f}{d} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mo>=</mo>
+<mo stretchy="false">(</mo>
+<mn>2</mn>
+<mi>k</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo stretchy="false">)</mo>
+<mfrac>
+<mi>λ</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\Delta = (2k + 1) \frac{\lambda}{2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mo>=</mo>
+<mi>k</mi>
+<mi>λ</mi>
+</mrow>
+<annotation encoding="application/x-tex">\Delta = k\lambda </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>d</mi>
+<mi>sin</mi>
+<mo>⁡</mo>
+<mi>φ</mi>
+<mo>=</mo>
+<mi>k</mi>
+<mi>λ</mi>
+</mrow>
+<annotation encoding="application/x-tex">d \sin \varphi = k\lambda </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Теория относительности</strong>
+</h3>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>v</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msub>
+<mi>v</mi>
+<mn>1</mn>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>v</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mfrac>
+<mrow>
+<msub>
+<mi>v</mi>
+<mn>1</mn>
+</msub>
+<msub>
+<mi>v</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+<msup>
+<mi>c</mi>
+<mn>2</mn>
+</msup>
+</mfrac>
+</mrow>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">v = \frac{v_1 + v_2}{1 + \frac{v_1 v_2}{c^2}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>l</mi>
+<mo>=</mo>
+<msub>
+<mi>l</mi>
+<mn>0</mn>
+</msub>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mfrac>
+<msup>
+<mi>v</mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>c</mi>
+<mn>2</mn>
+</msup>
+</mfrac>
+</mrow>
+</msqrt>
+</mrow>
+<annotation encoding="application/x-tex">l = l_0 \sqrt{1 - \frac{v^2}{c^2}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>τ</mi>
+<mo>=</mo>
+<mfrac>
+<msub>
+<mi>τ</mi>
+<mn>0</mn>
+</msub>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mfrac>
+<msup>
+<mi>v</mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>c</mi>
+<mn>2</mn>
+</msup>
+</mfrac>
+</mrow>
+</msqrt>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\tau = \frac{\tau_0}{\sqrt{1 - \frac{v^2}{c^2}}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>m</mi>
+<mo>=</mo>
+<mfrac>
+<msub>
+<mi>m</mi>
+<mn>0</mn>
+</msub>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mfrac>
+<msup>
+<mi>v</mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>c</mi>
+<mn>2</mn>
+</msup>
+</mfrac>
+</mrow>
+</msqrt>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">m = \frac{m_0}{\sqrt{1 - \frac{v^2}{c^2}}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>E</mi>
+<mo>=</mo>
+<mi>m</mi>
+<msup>
+<mi>c</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">E = m c^2 </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Квантовая физика</strong>
+</h3>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>E</mi>
+<mo>=</mo>
+<mi>h</mi>
+<mi>ν</mi>
+</mrow>
+<annotation encoding="application/x-tex">E = h \nu </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>p</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>h</mi>
+<mi>ν</mi>
+</mrow>
+<mi>c</mi>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">p = \frac{h \nu}{c} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>h</mi>
+<mi>ν</mi>
+<mo>=</mo>
+<mi>A</mi>
+<mo>+</mo>
+<mfrac>
+<mrow>
+<mi>m</mi>
+<msup>
+<mi>v</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">h \nu = A + \frac{m v^2}{2} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mi>h</mi>
+<msub>
+<mi>ν</mi>
+<mtext>min</mtext>
+</msub>
+<mo>=</mo>
+<mi>h</mi>
+<mfrac>
+<mi>c</mi>
+<msub>
+<mi>λ</mi>
+<mtext>кр</mtext>
+</msub>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">A = h \nu_{\text{min}} = h \frac{c}{\lambda_{\text{кр}}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mfrac>
+<mrow>
+<mi>m</mi>
+<msup>
+<mi>v</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<mi>e</mi>
+<msub>
+<mi>U</mi>
+<mn>3</mn>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">\frac{m v^2}{2} = e U_3 </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>h</mi>
+<mi>ν</mi>
+<mo>=</mo>
+<msub>
+<mi>E</mi>
+<mi>n</mi>
+</msub>
+<mo>−</mo>
+<msub>
+<mi>E</mi>
+<mi>m</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">h \nu = E_n - E_m </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>λ</mi>
+<mo>=</mo>
+<mfrac>
+<mi>h</mi>
+<mrow>
+<mi>m</mi>
+<mi>v</mi>
+</mrow>
+</mfrac>
+</mrow>
+<annotation encoding="application/x-tex">\lambda = \frac{h}{m v} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>N</mi>
+<mo>=</mo>
+<msub>
+<mi>N</mi>
+<mn>0</mn>
+</msub>
+<mo>⋅</mo>
+<msup>
+<mn>2</mn>
+<mrow>
+<mo>−</mo>
+<mfrac>
+<mi>t</mi>
+<mi>T</mi>
+</mfrac>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">N = N_0 \cdot 2^{-\frac{t}{T}} </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi mathvariant="normal">Δ</mi>
+<mi>M</mi>
+<mo>=</mo>
+<mi>Z</mi>
+<msub>
+<mi>m</mi>
+<mi>p</mi>
+</msub>
+<mo>+</mo>
+<mi>N</mi>
+<msub>
+<mi>m</mi>
+<mi>n</mi>
+</msub>
+<mo>−</mo>
+<msub>
+<mi>M</mi>
+<mi>x</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">\Delta M = Z m_p + N m_n - M_x </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<span class="katex-display ds-markdown-math">
+<span class="katex">
+<span class="katex-mathml">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>E</mi>
+<mrow>
+<mi>c</mi>
+<mi>e</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mi mathvariant="normal">Δ</mi>
+<mi>M</mi>
+<msup>
+<mi>c</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">E_{ce} = \Delta M c^2 </annotation>
+</semantics>
+</math>
+</span>
+
+</span>
+</span>
+<hr/>
+<h3>
+<strong>Таблицы</strong>
+</h3>
+<h4>Универсальные постоянные</h4>
+<table>
+<thead>
+<tr>
+<th>Название</th>
+<th>Обозначение</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ускорение свободного падения</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>g</mi>
+</mrow>
+<annotation encoding="application/x-tex">g</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>9</mn>
+<mo separator="true">,</mo>
+<mn>81</mn>
+<mtext></mtext>
+<msup>
+<mtext>м/с</mtext>
+<mn>2</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">9,81 \, \text{м/с}^2</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<td>Гравитационная постоянная</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>G</mi>
+</mrow>
+<annotation encoding="application/x-tex">G</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>6</mn>
+<mo separator="true">,</mo>
+<mn>67</mn>
+<mo>⋅</mo>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>11</mn>
+</mrow>
+</msup>
+<mtext></mtext>
+<mtext>Н·м²/кг²</mtext>
+</mrow>
+<annotation encoding="application/x-tex">6,67 \cdot 10^{-11} \, \text{Н·м²/кг²}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<td>Универсальная газовая постоянная</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>R</mi>
+</mrow>
+<annotation encoding="application/x-tex">R</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>8</mn>
+<mo separator="true">,</mo>
+<mn>31</mn>
+<mtext></mtext>
+<mtext>Дж/(моль·К)</mtext>
+</mrow>
+<annotation encoding="application/x-tex">8,31 \, \text{Дж/(моль·К)}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<td>Число Авогадро</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>N</mi>
+<mi>A</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">N_A</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>6</mn>
+<mo separator="true">,</mo>
+<mn>02</mn>
+<mo>⋅</mo>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>23</mn>
+</msup>
+<mtext></mtext>
+<msup>
+<mtext>моль</mtext>
+<mrow>
+<mo>−</mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">6,02 \cdot 10^{23} \, \text{моль}^{-1}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<td>Постоянная Больцмана</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>k</mi>
+</mrow>
+<annotation encoding="application/x-tex">k</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<mo separator="true">,</mo>
+<mn>38</mn>
+<mo>⋅</mo>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>23</mn>
+</mrow>
+</msup>
+<mtext></mtext>
+<mtext>Дж/К</mtext>
+</mrow>
+<annotation encoding="application/x-tex">1,38 \cdot 10^{-23} \, \text{Дж/К}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<td>Скорость света</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>c</mi>
+</mrow>
+<annotation encoding="application/x-tex">c</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>3</mn>
+<mo>⋅</mo>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>8</mn>
+</msup>
+<mtext></mtext>
+<mtext>м/с</mtext>
+</mrow>
+<annotation encoding="application/x-tex">3 \cdot 10^8 \, \text{м/с}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<td>Элементарный заряд</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>e</mi>
+</mrow>
+<annotation encoding="application/x-tex">e</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<mo separator="true">,</mo>
+<mn>60</mn>
+<mo>⋅</mo>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>19</mn>
+</mrow>
+</msup>
+<mtext></mtext>
+<mtext>Кл</mtext>
+</mrow>
+<annotation encoding="application/x-tex">1,60 \cdot 10^{-19} \, \text{Кл}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<td>Постоянная Планка</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>h</mi>
+</mrow>
+<annotation encoding="application/x-tex">h</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>6</mn>
+<mo separator="true">,</mo>
+<mn>63</mn>
+<mo>⋅</mo>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>34</mn>
+</mrow>
+</msup>
+<mtext></mtext>
+<mtext>Дж·с</mtext>
+</mrow>
+<annotation encoding="application/x-tex">6,63 \cdot 10^{-34} \, \text{Дж·с}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<td>Масса покоя электрона</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>m</mi>
+<mi>e</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">m_e</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>9</mn>
+<mo separator="true">,</mo>
+<mn>11</mn>
+<mo>⋅</mo>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>31</mn>
+</mrow>
+</msup>
+<mtext></mtext>
+<mtext>кг</mtext>
+</mrow>
+<annotation encoding="application/x-tex">9,11 \cdot 10^{-31} \, \text{кг}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<td>Масса покоя протона</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>m</mi>
+<mi>p</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">m_p</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<mo separator="true">,</mo>
+<mn>67</mn>
+<mo>⋅</mo>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>27</mn>
+</mrow>
+</msup>
+<mtext></mtext>
+<mtext>кг</mtext>
+</mrow>
+<annotation encoding="application/x-tex">1,67 \cdot 10^{-27} \, \text{кг}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>Множители СИ</h4>
+<table>
+<thead>
+<tr>
+<th>Название</th>
+<th>Обозначение</th>
+<th>Множитель</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>йотта</td>
+<td>Й</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>24</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{24}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 Йм = 1 000 000 000 000 000 000 000 000 м</td>
+</tr>
+<tr>
+<td>зетта</td>
+<td>З</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>21</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{21}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 ЗДж = 1 000 000 000 000 000 000 000 Дж</td>
+</tr>
+<tr>
+<td>экса</td>
+<td>Э</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>18</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{18}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 ЭВ = 1 000 000 000 000 000 000 В</td>
+</tr>
+<tr>
+<td>пета</td>
+<td>П</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>15</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{15}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 ПФ = 1 000 000 000 000 000 Ф</td>
+</tr>
+<tr>
+<td>тера</td>
+<td>Т</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>12</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{12}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 ТОм = 1 000 000 000 000 Ом</td>
+</tr>
+<tr>
+<td>гига</td>
+<td>Г</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>9</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^9</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 ГГц = 1 000 000 000 Гц</td>
+</tr>
+<tr>
+<td>мега</td>
+<td>М</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>6</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^6</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 МПа = 1 000 000 Па</td>
+</tr>
+<tr>
+<td>кило</td>
+<td>к</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>3</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^3</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 кН = 1 000 Н</td>
+</tr>
+<tr>
+<td>гекто</td>
+<td>г</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>2</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^2</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 гПа = 100 Па</td>
+</tr>
+<tr>
+<td>дека</td>
+<td>да</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mn>1</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^1</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 дал = 10 л</td>
+</tr>
+<tr>
+<td>деци</td>
+<td>д</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-1}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 дм = 0,1 м</td>
+</tr>
+<tr>
+<td>санти</td>
+<td>с</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-2}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 см = 0,01 м</td>
+</tr>
+<tr>
+<td>милли</td>
+<td>м</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>3</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-3}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 мА = 0,001 А</td>
+</tr>
+<tr>
+<td>микро</td>
+<td>мк</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>6</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-6}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 мкФ = 0,000 001 Ф</td>
+</tr>
+<tr>
+<td>нано</td>
+<td>н</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>9</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-9}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 нм = 0,000 000 001 м</td>
+</tr>
+<tr>
+<td>пико</td>
+<td>п</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>12</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-12}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 пФ = 0,000 000 000 001 Ф</td>
+</tr>
+<tr>
+<td>фемто</td>
+<td>ф</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>15</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-15}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 фс = 0,000 000 000 000 001 с</td>
+</tr>
+<tr>
+<td>атто</td>
+<td>а</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>18</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-18}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 ам = 0,000 000 000 000 000 001 м</td>
+</tr>
+<tr>
+<td>зепто</td>
+<td>з</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>21</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-21}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 зКл = 0,000 000 000 000 000 000 001 Кл</td>
+</tr>
+<tr>
+<td>йокто</td>
+<td>й</td>
+<td>
+<span class="katex">
+<span class="katex-mathml">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<msup>
+<mn>0</mn>
+<mrow>
+<mo>−</mo>
+<mn>24</mn>
+</mrow>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">10^{-24}</annotation>
+</semantics>
+</math>
+</span>
+</span>
+</td>
+<td>1 йг = 0,000 000 000 000 000 000 000 001 г</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+{% endblock %}

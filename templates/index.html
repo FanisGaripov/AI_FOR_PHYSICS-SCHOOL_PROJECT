@@ -3,14 +3,33 @@
 {% block title %}Physics Chatbot{% endblock %}
 
 {% block content %}
-<!-- Контейнер чатбота -->
-<div class="container">
+<main class="main-content">
+    <!-- Контейнер чатбота -->
+    <div class="container">
         <h1><i class="fas fa-atom"></i> Physics AI</h1>
         <form id="questionForm">
             <input type="text" id="question" name="question" placeholder="Напиши свой вопрос по физике...">
             <button type="submit">Спросить у ИИ</button>
         </form>
         <div id="answer" style="white-space: pre-wrap;"></div>
+
+        <!-- Пояснительный текст -->
+        <div class="chatbot-description">
+            <p>Этот чат-бот по физике поможет вам:</p>
+            <ul>
+                <li>Объяснить сложные физические концепции и законы простым языком</li>
+                <li>Решать задачи с пошаговым разбором и формулами</li>
+                <li>Готовиться к экзаменам (ЕГЭ, ОГЭ и другим), контрольным, проверочным</li>
+                <li>Работать с формулами</li>
+            </ul>
+            <p>Задавайте вопросы по механике, термодинамике, электродинамике, оптике, квантовой и ядерной физике.</p>
+            <p class="example-questions">
+                <strong>Примеры вопросов:</strong><br>
+                "Объясни второй закон Ньютона"<br>
+                "Как решить задачу на закон сохранения энергии?"<br>
+                "Выведи формулу для периода колебаний математического маятника"
+            </p>
+        </div>
     </div>
 
     <script>
@@ -20,11 +39,14 @@
         form.addEventListener('submit', function(event) {
             event.preventDefault();
             const question = document.getElementById('question').value;
-            answerDiv.innerHTML = ''; // Очистка предыдущего ответа
+            answerDiv.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-spin"></i> ИИ обрабатывает запрос...</div>';
 
             const eventSource = new EventSource(`/stream?question=${encodeURIComponent(question)}`);
 
             eventSource.onmessage = function(event) {
+                if (answerDiv.querySelector('.loading')) {
+                    answerDiv.innerHTML = '';
+                }
                 answerDiv.innerHTML += event.data;
                 if (MathJax.typeset) {
                     MathJax.typeset([answerDiv]);
@@ -33,7 +55,48 @@
 
             eventSource.onerror = function() {
                 eventSource.close();
+                if (answerDiv.querySelector('.loading')) {
+                    answerDiv.innerHTML = '<div class="error"><i class="fas fa-exclamation-triangle"></i> Произошла ошибка при обработке запроса</div>';
+                }
             };
         });
     </script>
+</main>
+
+<style>
+    .chatbot-description {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        line-height: 1.6;
+    }
+
+    .chatbot-description ul {
+        padding-left: 20px;
+    }
+
+    .chatbot-description li {
+        margin-bottom: 8px;
+    }
+
+    .example-questions {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #eaf2f8;
+        border-left: 4px solid #3498db;
+    }
+
+    .loading {
+        color: #3498db;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .error {
+        color: #e74c3c;
+        text-align: center;
+        padding: 15px;
+    }
+</style>
 {% endblock %}

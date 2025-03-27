@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <meta name="description" content="{% block description %}{% endblock %}"/>
     <title>{% block title %}Physics AI{% endblock %}</title>
     <style>
         :root {
@@ -267,15 +269,27 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="/physics-chatbot" class="navbar-brand">
-            <i class="fas fa-atom"></i> Physics AI
+        <a href="/" class="navbar-brand">
+            <img src="/static/favicon.png" height="40px" width="40px"> Physics AI
         </a>
         <button class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
         </button>
         <ul class="navbar-nav" id="navbarNav">
             <li class="nav-item">
-                <a href="/physics-chatbot" class="nav-link"><i class="fas fa-home"></i> Главная</a>
+                <a href="/physics-chatbot" class="nav-link"><i class="fas fa-brain"></i> ИИ по Физике</a>
+            </li>
+            <li class="nav-item">
+                <a href="/ege" class="nav-link"><i class="fa-solid fa-book"></i> ЕГЭ по физике</a>
+            </li>
+            <li class="nav-item">
+                <a href="/oge" class="nav-link"><i class="fa-solid fa-book"></i> ОГЭ по физике</a>
+            </li>
+            <li class="nav-item">
+                <a href="/spisok-formul-po-fizike" class="nav-link"><i class="fa-solid fa-calculator"></i> Основные формулы</a>
+            </li>
+            <li class="nav-item">
+                <a href="/experiments" class="nav-link"><i class="fa fa-flask" aria-hidden="true"></i> Онлайн лаборатория</a>
             </li>
             <li class="nav-item">
                 <a href="/aboutme" class="nav-link"><i class="fas fa-user"></i> Обо мне</a>
@@ -283,9 +297,7 @@
         </ul>
     </nav>
 
-    <main class="main-content">
         {% block content %} {% endblock %}
-    </main>
 
     <footer class="footer">
         <p>&copy; 2025 Physics AI. Все права защищены.</p>

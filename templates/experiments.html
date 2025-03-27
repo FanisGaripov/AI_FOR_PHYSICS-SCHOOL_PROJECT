@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Онлайн лаборатория{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <div class="container">
+    <h1>Каталог физических экспериментов</h1>
+    <h2 class="section-title">Содержание</h2>
+    <nav>
+            <ul class="nav-list">
+                <li><a href="#Механика">1.Механика</a></li>
+                <li><a href="#Молекулярная физика">2.Молекулярная физика:</a></li>
+                <li><a href="#Электричество и магнетизм">3.Электричество и магнетизм</a></li>
+                <li><a href="#Колебания и волны">4.Колебания и волны</a></li>
+                <li><a href="#Оптика">5.Оптика</a></li>
+                <li><a href="#Квантовая и атомная физика">6.Квантовая и атомная физика</a></li>
+            </ul>
+        </nav>
+
+    {% for category, exps in experiments.items() %}
+    <section>
+        <h2 class="section-title" id="{{ category }}">{{ category }}</h2>
+
+        <div>
+            {% for exp in exps %}
+            <div>
+                <div>
+                    <div>
+                        <h5 class="topic-title"><span class="badge bg-primary mb-2">№{{ exp.num }}</span>  {{ exp.title }}</h5>
+                    </div>
+                    <div style="text-align: center;">
+                        {% if exp.url %}
+                        <a href="{{ exp.url }}" target="_blank" class="btn-purple">
+                            Перейти к эксперименту №{{ exp.num }}
+                        </a>
+                        {% else %}
+                        <span>Ссылка отсутствует</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+    </section>
+    {% endfor %}
+<style>
+    /* Основные стили */
+    body {
+        font-family: 'Roboto', 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .container {
+        max-width: 800px; /* Уменьшил ширину для лучшей читаемости */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 40px 0 20px;
+        font-size: 1.8rem;
+        color: #3498db;
+        font-weight: 600;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    .topic-title {
+        font-size: 1.4rem;
+        margin: 25px 0 15px;
+        color: #2c3e50;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        .container {
+            padding: 15px;
+        }
+
+        .main-title {
+            font-size: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        .topic-title {
+            font-size: 1.2rem;
+        }
+    }
+    .btn-purple {
+        display: inline-block; /* Делает ссылку блочным элементом */
+        padding: 10px 20px; /* Добавляет отступы */
+        background: var(--gradient);
+        color: white; /* Цвет текста */
+        text-decoration: none; /* Убирает подчеркивание */
+        border-radius: 5px; /* Закругленные углы */
+        transition: background-color 0.3s; /* Плавный переход цвета */
+    }
+    .btn-purple:hover {
+        background-color: #6a006a; /* Темнее при наведении */
+    }
+    .nav-list {
+        list-style-type: none; /* Убираем маркеры списка */
+        margin: 0; /* Убираем внешние отступы */
+        justify-content: space-around; /* Пространство между элементами */
+    }
+    .nav-list a {
+        font-size: 1.4rem;
+    }
+</style>
+</div>
+</main>
+{% endblock %}

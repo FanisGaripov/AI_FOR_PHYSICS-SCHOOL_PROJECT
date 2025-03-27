@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}Каталог заданий ЕГЭ по физике{% endblock %}
+{% block content %}
+<main class="main-content">
+<div class="container">
+    <h1 class="main-title">Задания ЕГЭ</h1>
+
+    <div class="section">
+        <h2 class="section-title">Основные разделы</h2>
+        {% for topic in catalog.main_topics %}
+            <div class="topic-section">
+                <h3 class="topic-title">{{ topic.topic_id }}. {{ topic.topic_name }}</h3>
+                <ul class="category-list">
+                    {% for category in topic.categories %}
+                        <li class="category-item">
+                            <a href="/ege/{{ category.category_id }}" class="category-link">
+                                {{ category.category_name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Задания прошлых лет, не вошедшие в ЕГЭ 2025</h2>
+        {% for topic in catalog.other_topics %}
+            <div class="topic-section">
+                <h3 class="topic-title">{{ topic.topic_id }}. {{ topic.topic_name }}</h3>
+                <ul class="category-list">
+                    {% for category in topic.categories %}
+                        <li class="category-item">
+                            <a href="/ege/{{ category.category_id }}" class="category-link">
+                                {{ category.category_name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    /* Основные стили */
+    body {
+        font-family: 'Roboto', 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .container {
+        max-width: 800px; /* Уменьшил ширину для лучшей читаемости */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Заголовки */
+    .main-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #2c3e50;
+        font-weight: 700;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 40px 0 20px;
+        color: #3498db;
+        font-weight: 600;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    .topic-title {
+        font-size: 1.4rem;
+        margin: 25px 0 15px;
+        color: #2c3e50;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    /* Вертикальный список категорий */
+    .category-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+    }
+
+    .category-item {
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .category-link {
+        display: block;
+        padding: 12px 20px;
+        text-decoration: none;
+        color: #2980b9;
+        font-weight: 400;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        transition: all 0.2s ease;
+    }
+
+    .category-link:hover {
+        color: #fff;
+        background-color: #3498db;
+        transform: translateX(5px);
+    }
+
+    /* Разделитель между темами */
+    .topic-section {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        .container {
+            padding: 15px;
+        }
+
+        .main-title {
+            font-size: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        .topic-title {
+            font-size: 1.2rem;
+        }
+
+        .category-link {
+            padding: 10px 15px;
+        }
+    }
+</style>
+            </main>
+{% endblock %}
