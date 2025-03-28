@@ -103,6 +103,11 @@ def parse_experiments(text):
     return categories
 
 
+@app.route('/yandex_39563c53a7f880d4.html')
+def ya():
+    return render_template('yandex_39563c53a7f880d4.html')
+
+
 @app.route('/experiments')
 def experiments():
     stroka = '''Механика:
