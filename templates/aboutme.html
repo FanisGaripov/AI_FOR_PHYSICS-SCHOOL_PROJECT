@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
-{% block title %}Physics Chatbot{% endblock %}
+{% block title %}PhysicsPRO - Обо мне{% endblock %}
+{% block description %}PhysicsPRO и его создатель, расскажу немного о себе.{% endblock %}
 
 {% block content %}
 <main class="main-content">
@@ -15,10 +16,11 @@
             max-width: 1000px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.18);
-            margin-top: 6rem; /* Отступ для навбара */
+            margin: 6rem auto 2rem;
             position: relative;
             z-index: 1;
             display: flex;
+            flex-direction: row;
             align-items: center;
             text-align: left;
         }
@@ -28,17 +30,18 @@
             height: auto;
             border-radius: 10px;
             margin-right: 2rem;
+            object-fit: cover;
         }
 
         .about-container h1 {
-            font-size: 40px;
+            font-size: 2.5rem;
             font-family: Andika;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .about-container p {
-            font-size: 21px;
+            font-size: 1.2rem;
             font-family: Andika;
             line-height: 1.6;
             margin-bottom: 1.5rem;
@@ -57,12 +60,68 @@
 
         .github-links {
             margin-top: 1rem;
+        }
+
+        .github-links p {
+            margin-bottom: 0.5rem;
             font-size: 1rem;
         }
 
         .github-links a {
             display: inline-block;
-            margin-right: 1rem;
+            margin: 0 1rem 0.5rem 0;
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                padding: 1.5rem;
+                margin-top: 4rem;
+                text-align: center;
+            }
+
+            .about-container img {
+                width: 200px;
+                margin: 0 auto 1.5rem;
+            }
+
+            .about-container h1 {
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .about-container p {
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            .github-links {
+                text-align: left;
+            }
+
+            .github-links a {
+                display: block;
+                margin: 0.5rem 0;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-container {
+                padding: 1rem;
+                margin-top: 3.5rem;
+            }
+
+            .about-container h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-container p {
+                font-size: 0.95rem;
+            }
         }
   </style>
 </head>
@@ -76,7 +135,8 @@
         </p>
         <p>
             В свободное время я люблю программировать, читать и изучать новые технологии.
-            Если у вас есть вопросы или предложения, не стесняйтесь <a href="/contact">связаться со мной</a>.</p>
+            Если у вас есть вопросы или предложения, не стесняйтесь <a href="/contact">связаться со мной</a>.
+        </p>
         <p>Спасибо, что посетили мой сайт!</p>
         <div class="github-links">
             <p>Мои проекты на GitHub:</p>
@@ -87,7 +147,6 @@
             <a href="https://github.com/FanisGaripov/PCCONFIGURATOR-DB" target="_blank">PCCONFIGURATOR-DB</a>
             <a href="https://github.com/FanisGaripov/PCBUILDERSHOP" target="_blank">PCBUILDERSHOP</a>
             <a href="https://github.com/FanisGaripov/Snake-game" target="_blank">SnakeGame</a>
-
         </div>
     </div>
 </div>
