@@ -7,39 +7,644 @@
     <h1 class="main-title">Задания ЕГЭ</h1>
 
     <div class="section">
-        <h2 class="section-title">Основные разделы</h2>
-        {% for topic in catalog.main_topics %}
-            <div class="topic-section">
-                <h3 class="topic-title">{{ topic.topic_id }}. {{ topic.topic_name }}</h3>
-                <ul class="category-list">
-                    {% for category in topic.categories %}
-                        <li class="category-item">
-                            <a href="/ege/{{ category.category_id }}" class="category-link">
-                                {{ category.category_name }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endfor %}
-    </div>
+        <h2 class="section-title">1. Механика</h2>
+        <div class="topic-section">
+            <ul class="category-list">
+                <li class="category-item">
+                    <a href="/ege/1_Механика" class="category-link">
+                        1.1 Механика (основной раздел) - 17 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/111_Механическое_движение_Относительность_механиче" class="category-link">
+                        1.2 Механическое движение. Относительность механического движения - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/113_Скорость_материальной_точки" class="category-link">
+                        1.3 Скорость материальной точки - 6 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/114_Ускорение_материальной_точки" class="category-link">
+                        1.4 Ускорение материальной точки - 22 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/115_Равномерное_прямолинейное_движение" class="category-link">
+                        1.5 Равномерное прямолинейное движение - 10 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/116_Равноускоренное_прямолинейное_движение" class="category-link">
+                        1.6 Равноускоренное прямолинейное движение - 44 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/117_Свободное_падение_Ускорение_свободного_падения" class="category-link">
+                        1.7 Свободное падение. Ускорение свободного падения - 21 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/118_Криволинейное_движение_Движение_материальной_т" class="category-link">
+                        1.8 Криволинейное движение. Движение материальной точки - 11 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/11_Кинематика" class="category-link">
+                        1.9 Кинематика - 12 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/121_Инерциальные_системы_отсчёта_Первый_закон_Ньют" class="category-link">
+                        1.10 Инерциальные системы отсчёта. Первый закон Ньютона - 5 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/122_Масса_тела_Плотность_вещества" class="category-link">
+                        1.11 Масса тела. Плотность вещества - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/123_Сила_Принцип_суперпозиции_сил" class="category-link">
+                        1.12 Сила. Принцип суперпозиции сил - 14 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/124_Второй_закон_Ньютона_для_материальной_точки_в_" class="category-link">
+                        1.13 Второй закон Ньютона для материальной точки - 16 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/125_Третий_закон_Ньютона_для_материальных_точек" class="category-link">
+                        1.14 Третий закон Ньютона для материальных точек - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/126_Закон_всемирного_тяготения_Сила_тяжести_Центр_" class="category-link">
+                        1.15 Закон всемирного тяготения. Сила тяжести - 22 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/127_Сила_упругости_Закон_Гука" class="category-link">
+                        1.16 Сила упругости. Закон Гука - 3 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/128_Сила_трения_Сухое_трение_Сила_трения_скольжени" class="category-link">
+                        1.17 Сила трения. Сухое трение - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/12_Динамика" class="category-link">
+                        1.18 Динамика - 42 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/131_Момент_силы_относительно_оси_вращения" class="category-link">
+                        1.19 Момент силы относительно оси вращения - 17 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/132_Центр_масс_тела_Центр_масс_системы_материальны" class="category-link">
+                        1.20 Центр масс тела. Центр масс системы - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/133_Условия_равновесия_твёрдого_тела_в_ИСО" class="category-link">
+                        1.21 Условия равновесия твёрдого тела в ИСО - 17 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/134_Закон_Паскаля" class="category-link">
+                        1.22 Закон Паскаля - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/135_Давление_в_жидкости_покоящейся_в_ИСО" class="category-link">
+                        1.23 Давление в жидкости, покоящейся в ИСО - 5 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/136_Закон_Архимеда_Условия_плавания_тел" class="category-link">
+                        1.24 Закон Архимеда. Условия плавания тел - 26 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/13_Статика" class="category-link">
+                        1.25 Статика - 8 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/141_Импульс_материальной_точки" class="category-link">
+                        1.26 Импульс материальной точки - 16 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/142_Импульс_системы_тел" class="category-link">
+                        1.27 Импульс системы тел - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/143_Закон_изменения_и_сохранения_импульса" class="category-link">
+                        1.28 Закон изменения и сохранения импульса - 20 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/144_Работа_силы_на_малом_перемещении" class="category-link">
+                        1.29 Работа силы на малом перемещении - 5 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/146_Кинетическая_энергия_материальной_точки_Закон_" class="category-link">
+                        1.30 Кинетическая энергия материальной точки - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/147_Потенциальная_энергия_для_потенциальных_сил_По" class="category-link">
+                        1.31 Потенциальная энергия для потенциальных сил - 7 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/148_Закон_изменения_и_сохранения_механической_энер" class="category-link">
+                        1.32 Закон изменения и сохранения механической энергии - 27 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/14_Законы_сохранения_в_механике" class="category-link">
+                        1.33 Законы сохранения в механике - 21 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/151_Гармонические_колебания_материальной_точки_Амп" class="category-link">
+                        1.34 Гармонические колебания материальной точки - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/152_Период_и_частота_колебаний_Период_малых_свобод" class="category-link">
+                        1.35 Период и частота колебаний - 22 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/154_Поперечные_и_продольные_волны_Скорость_распрос" class="category-link">
+                        1.36 Поперечные и продольные волны. Скорость распространения - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/155_Звук_Скорость_звука" class="category-link">
+                        1.37 Звук. Скорость звука - 12 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/15_Механические_колебания_и_волны" class="category-link">
+                        1.38 Механические колебания и волны - 11 заданий
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2 class="section-title">Задания прошлых лет, не вошедшие в ЕГЭ 2025</h2>
-        {% for topic in catalog.other_topics %}
-            <div class="topic-section">
-                <h3 class="topic-title">{{ topic.topic_id }}. {{ topic.topic_name }}</h3>
-                <ul class="category-list">
-                    {% for category in topic.categories %}
-                        <li class="category-item">
-                            <a href="/ege/{{ category.category_id }}" class="category-link">
-                                {{ category.category_name }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endfor %}
+        <h2 class="section-title">2. Молекулярная физика и термодинамика</h2>
+        <div class="topic-section">
+            <ul class="category-list">
+                <li class="category-item">
+                    <a href="/ege/2_Молекулярная_физика_Термодинамика" class="category-link">
+                        2.1 Молекулярная физика и термодинамика (основной раздел) - 33 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/211_Модели_строения_газов_жидкостей_и_твердых_тел" class="category-link">
+                        2.2 Модели строения газов, жидкостей и твердых тел - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/212_Тепловое_движение_атомов_и_молекул_вещества" class="category-link">
+                        2.3 Тепловое движение атомов и молекул вещества - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/216_Связь_между_давлением_и_средней_кинетической_э" class="category-link">
+                        2.4 Связь между давлением и средней кинетической энергией - 12 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/217_Абсолютная_температура" class="category-link">
+                        2.5 Абсолютная температура - 7 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/218_Связь_температуры_газа_со_средней_кинетической" class="category-link">
+                        2.6 Связь температуры газа со средней кинетической энергией - 12 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/219_Уравнение_pnkT" class="category-link">
+                        2.7 Уравнение p=nkT - 14 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/2110_Модель_идеального_газа_в_термодинамике" class="category-link">
+                        2.8 Модель идеального газа в термодинамике - 29 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/2111_Закон_Дальтона_для_давления_смеси_разреженных" class="category-link">
+                        2.9 Закон Дальтона для давления смеси разреженных газов - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/2112_Изопроцессы_в_разреженном_газе_с_постоянным_ч" class="category-link">
+                        2.10 Изопроцессы в разреженном газе - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/2113_Насыщенные_и_ненасыщенные_пары_Качественная_з" class="category-link">
+                        2.11 Насыщенные и ненасыщенные пары - 11 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/2114_Влажность_воздуха" class="category-link">
+                        2.12 Влажность воздуха - 33 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/2115_Изменение_агрегатных_состояний_вещества_испар" class="category-link">
+                        2.13 Изменение агрегатных состояний вещества (испарение) - 6 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/2116_Изменение_агрегатных_состояний_вещества_плавл" class="category-link">
+                        2.14 Изменение агрегатных состояний вещества (плавление) - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/21_Молекулярная_физика" class="category-link">
+                        2.15 Молекулярная физика - 27 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/221_Тепловое_равновесие_и_температура" class="category-link">
+                        2.16 Тепловое равновесие и температура - 3 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/222_Внутренняя_энергия" class="category-link">
+                        2.17 Внутренняя энергия - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/224_Количество_теплоты_Удельная_теплоемкость_вещес" class="category-link">
+                        2.18 Количество теплоты. Удельная теплоемкость - 11 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/225_Удельная_теплота_парообразования_Удельная_тепл" class="category-link">
+                        2.19 Удельная теплота парообразования и плавления - 19 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/226_Элементарная_работа_в_термодинамике_Вычисление" class="category-link">
+                        2.20 Элементарная работа в термодинамике - 11 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/227_Первый_закон_термодинамики" class="category-link">
+                        2.21 Первый закон термодинамики - 48 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/229_Принципы_действия_тепловых_машин_КПД" class="category-link">
+                        2.22 Принципы действия тепловых машин. КПД - 35 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/2210_Максимальное_значение_КПД_Цикл_Карно" class="category-link">
+                        2.23 Максимальное значение КПД. Цикл Карно - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/2211_Уравнение_теплового_баланса" class="category-link">
+                        2.24 Уравнение теплового баланса - 17 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/22_Термодинамика" class="category-link">
+                        2.25 Термодинамика - 28 заданий
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">3. Электродинамика</h2>
+        <div class="topic-section">
+            <ul class="category-list">
+                <li class="category-item">
+                    <a href="/ege/3_Электродинамика" class="category-link">
+                        3.1 Электродинамика (основной раздел) - 58 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/311_Электризация_тел_и_её_проявления_Электрический" class="category-link">
+                        3.2 Электризация тел и её проявления - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/312_Взаимодействие_зарядов_Точечные_заряды_Закон_К" class="category-link">
+                        3.3 Взаимодействие зарядов. Закон Кулона - 23 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/313_Электрическое_поле_Его_действие_на_электрическ" class="category-link">
+                        3.4 Электрическое поле. Действие на заряды - 3 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/314_Напряжённость_электрического_поля_Поле_точечно" class="category-link">
+                        3.5 Напряжённость электрического поля - 3 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/315_Потенциальность_электростатического_поля_Разно" class="category-link">
+                        3.6 Потенциальность электростатического поля - 3 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/316_Принцип_суперпозиции_электрических_полей" class="category-link">
+                        3.7 Принцип суперпозиции электрических полей - 11 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/317_Проводники_в_электростатическом_поле_Условие_р" class="category-link">
+                        3.8 Проводники в электростатическом поле - 6 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/318_Диэлектрики_в_электростатическом_поле_Диэлектр" class="category-link">
+                        3.9 Диэлектрики в электростатическом поле - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/319_Конденсатор_Электроёмкость_конденсатора_Электр" class="category-link">
+                        3.10 Конденсатор. Электроёмкость - 11 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/3111_Энергия_заряженного_конденсатора" class="category-link">
+                        3.11 Энергия заряженного конденсатора - 12 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/31_Электрическое_поле" class="category-link">
+                        3.12 Электрическое поле - 23 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/321_Сила_тока_Постоянный_ток" class="category-link">
+                        3.13 Сила тока. Постоянный ток - 27 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/322_Условия_существования_электрического_тока" class="category-link">
+                        3.14 Условия существования электрического тока - 13 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/323_Закон_Ома_для_участка_цепи" class="category-link">
+                        3.15 Закон Ома для участка цепи - 8 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/324_Электрическое_сопротивление_Зависимость_сопрот" class="category-link">
+                        3.16 Электрическое сопротивление - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/326_Закон_Ома_для_полной_замкнутой_электрической_ц" class="category-link">
+                        3.17 Закон Ома для полной замкнутой цепи - 11 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/327_Параллельное_соединение_проводников_Последоват" class="category-link">
+                        3.18 Параллельное и последовательное соединение - 36 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/328_Работа_электрического_тока_Закон_Джоуля_Ленца" class="category-link">
+                        3.19 Работа тока. Закон Джоуля-Ленца - 3 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/329_Мощность_электрического_тока_Тепловая_мощность" class="category-link">
+                        3.20 Мощность электрического тока - 18 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/32_Законы_постоянного_тока" class="category-link">
+                        3.21 Законы постоянного тока - 29 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/331_Механическое_взаимодействие_магнитов_Магнитное" class="category-link">
+                        3.22 Механическое взаимодействие магнитов - 3 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/332_Опыт_Эрстеда_Магнитное_поле_проводника_с_током" class="category-link">
+                        3.23 Опыт Эрстеда. Магнитное поле проводника - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/333_Сила_Ампера_её_направление_и_величина" class="category-link">
+                        3.24 Сила Ампера - 31 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/334_Сила_Лоренца_её_направление_и_величина_Движени" class="category-link">
+                        3.25 Сила Лоренца - 31 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/33_Магнитное_поле" class="category-link">
+                        3.26 Магнитное поле - 16 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/341_Поток_вектора_магнитной_индукции" class="category-link">
+                        3.27 Поток вектора магнитной индукции - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/343_Закон_электромагнитной_индукции_Фарадея" class="category-link">
+                        3.28 Закон электромагнитной индукции Фарадея - 22 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/344_ЭДС_индукции_в_прямом_проводнике" class="category-link">
+                        3.29 ЭДС индукции в прямом проводнике - 4 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/345_Правило_Ленца" class="category-link">
+                        3.30 Правило Ленца - 7 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/346_Индуктивность_Самоиндукция_ЭДС_самоиндукции" class="category-link">
+                        3.31 Индуктивность. Самоиндукция - 8 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/347_Энергия_магнитного_поля_катушки_с_током" class="category-link">
+                        3.32 Энергия магнитного поля катушки - 6 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/34_Электромагнитная_индукция" class="category-link">
+                        3.33 Электромагнитная индукция - 17 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/351_Колебательный_контур_Свободные_электромагнитны" class="category-link">
+                        3.34 Колебательный контур - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/352_Закон_сохранения_энергии_в_идеальном_колебател" class="category-link">
+                        3.35 Закон сохранения энергии в колебательном контуре - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/353_Вынужденные_электромагнитные_колебания_Резонан" class="category-link">
+                        3.36 Вынужденные электромагнитные колебания - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/35_Электромагнитные_колебания_и_волны" class="category-link">
+                        3.37 Электромагнитные колебания и волны - 11 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/361_Прямолинейное_распространение_света_в_однородн" class="category-link">
+                        3.38 Прямолинейное распространение света - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/362_Законы_отражения_света" class="category-link">
+                        3.39 Законы отражения света - 13 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/363_Построение_изображений_в_плоском_зеркале" class="category-link">
+                        3.40 Построение изображений в плоском зеркале - 5 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/364_Законы_преломления_света_Преломление_света_Абс" class="category-link">
+                        3.41 Законы преломления света - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/365_Полное_внутреннее_отражение" class="category-link">
+                        3.42 Полное внутреннее отражение - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/366_Собирающие_и_рассеивающие_линзы_Тонкая_линза_Ф" class="category-link">
+                        3.43 Собирающие и рассеивающие линзы - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/367_Формула_тонкой_линзы" class="category-link">
+                        3.44 Формула тонкой линзы - 19 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/368_Ход_луча_прошедшего_линзу_под_произвольным_угл" class="category-link">
+                        3.45 Ход луча через линзу - 15 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/3611_Дифракция_света_Дифракционная_решётка_Условие" class="category-link">
+                        3.46 Дифракция света. Дифракционная решётка - 8 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/36_Оптика" class="category-link">
+                        3.47 Оптика - 9 заданий
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">4. Квантовая физика</h2>
+        <div class="topic-section">
+            <ul class="category-list">
+                <li class="category-item">
+                    <a href="/ege/4_Квантовая_физика" class="category-link">
+                        4.1 Квантовая физика (основной раздел) - 56 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/412_Фотоны_Энергия_фотона_Импульс_фотона" class="category-link">
+                        4.2 Фотоны. Энергия и импульс фотона - 28 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/413_Фотоэффект_Опыты_АГ_Столетова_Законы_фотоэффек" class="category-link">
+                        4.3 Фотоэффект. Опыты Столетова - 16 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/414_Уравнение_Эйнштейна_для_фотоэффекта" class="category-link">
+                        4.4 Уравнение Эйнштейна для фотоэффекта - 20 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/41_Корпускулярно_волновой_дуализм" class="category-link">
+                        4.5 Корпускулярно-волновой дуализм - 9 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/421_Планетарная_модель_атома" class="category-link">
+                        4.6 Планетарная модель атома - 1 задание
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/422_Постулаты_Бора_Излучение_и_поглощение_фотонов_" class="category-link">
+                        4.7 Постулаты Бора - 10 заданий
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/42_Физика_атома" class="category-link">
+                        4.8 Физика атома - 2 задания
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/431_Нуклонная_модель_ядра_Гейзенберга_Иваненко_Зар" class="category-link">
+                        4.9 Нуклонная модель ядра - 26 заданий</a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/41_Корпускулярно_волновой_дуализм411_Гипотеза_М_Пл" class="category-link">
+                        4.10 Корпускулярно волновой дуализм - 14 заданий</a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/432_Радиоактивность_Альфа_распад_Бета_распад_Элект" class="category-link">
+                        4.11 Радиактивность. Альфа-распад, Бета-распад. - 15 заданий</a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/433_Закон_радиоактивного_распада" class="category-link">
+                        4.12 Закон радиактивного распада - 38 заданий</a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/434_Ядерные_реакции_Деление_и_синтез_ядер" class="category-link">
+                        4.13 Ядерный реакции. Деление и синтез ядер - 14 заданий</a>
+                </li>
+                <li class="category-item">
+                    <a href="/ege/43_Физика_атомного_ядра" class="category-link">
+                        4.14 Физика атомного ядра - 6 заданий</a>
+                </li>
+
+            </ul>
+        </div>
     </div>
 </div>
 

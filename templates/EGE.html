@@ -4,8 +4,20 @@
 {% block content %}
 <main class="main-content">
 <div class="container">
-    <h1>Задания ЕГЭ</h1>
-    {{ zadaniya|safe }}
+    <h1>Задания ЕГЭ по теме: {{ category }}</h1>
+    <div class="tasks-container">
+        {% for task in tasks %}
+        <div class="task-item">
+            <h3>Задание {{ loop.index }}</h3>
+            <p><strong>{{ task.type }}</strong></p>
+            <div class="task-text">{{ task.text }}</div>
+            {% if task.image %}
+            <img src="{{ task.image }}" class="task-image" alt="Изображение задания">
+            {% endif %}
+        </div>
+        <br>
+        {% endfor %}
+    </div>
 </div>
 
 <style>

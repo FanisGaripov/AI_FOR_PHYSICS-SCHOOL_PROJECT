@@ -4,144 +4,429 @@
 {% block content %}
 <main class="main-content">
 <div class="container">
-    <h1 class="main-title">Задания ОГЭ</h1>
+    <h1 class="main-title">Задания ОГЭ по физике 2025(ФИПИ)</h1>
 
     <div class="section">
-        <h2 class="section-title">Основные разделы</h2>
-        {% for topic in catalog.main_topics %}
-            <div class="topic-section">
-                <h3 class="topic-title">{{ topic.topic_id }}. {{ topic.topic_name }}</h3>
-                <ul class="category-list">
-                    {% for category in topic.categories %}
-                        <li class="category-item">
-                            <a href="/oge/{{ category.category_id }}" class="category-link">
-                                {{ category.category_name }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endfor %}
+        <h2 class="section-title">1. Механические явления</h2>
+        <div class="topic-section">
+            <ul class="category-list">
+                <li class="category-item">
+                    <a href="/oge/1_МЕХАНИЧЕСКИЕ_ЯВЛЕНИЯ" class="category-link">
+                        1.1 Механические явления (основной раздел)
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/11_Механическое_движение_Материальная_точка_Систем" class="category-link">
+                        1.2 Механическое движение. Материальная точка. Система отсчета
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/12_Равномерное_и_неравномерное_движение_Средняя_ск" class="category-link">
+                        1.3 Равномерное и неравномерное движение. Средняя скорость
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/13_Равномерное_прямолинейное_движение_Зависимость_" class="category-link">
+                        1.4 Равномерное прямолинейное движение. Зависимость координаты от времени
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/14_Зависимость_координаты_тела_от_времени_в_случае" class="category-link">
+                        1.5 Графики зависимости координаты от времени
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/15_Свободное_падение_Формулы_описывающие_свободное" class="category-link">
+                        1.6 Свободное падение. Формулы движения
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/16_Скорость_равномерного_движения_тела_по_окружнос" class="category-link">
+                        1.7 Движение по окружности. Линейная скорость
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/17_Масса_Плотность_вещества_Формула_для_вычисления" class="category-link">
+                        1.8 Масса и плотность вещества. Формулы расчета
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/18_Сила_векторная_физическая_величина_Сложение_сил" class="category-link">
+                        1.9 Сила как векторная величина. Сложение сил
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/19_Явление_инерции_Первый_закон_Ньютона" class="category-link">
+                        1.10 Явление инерции. Первый закон Ньютона
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/110_Второй_закон_Ньютона_Сонаправленность_вектора_" class="category-link">
+                        1.11 Второй закон Ньютона. Сонаправленность векторов
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/111_Взаимодействие_тел_Третий_закон_Ньютона" class="category-link">
+                        1.12 Взаимодействие тел. Третий закон Ньютона
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/112_Трение_покоя_и_трение_скольжения_Формула_для_в" class="category-link">
+                        1.13 Трение покоя и скольжения. Формулы силы трения
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/113_Деформация_тела_Упругие_и_неупругие_деформации" class="category-link">
+                        1.14 Деформация тела. Упругие и неупругие деформации
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/114_Всемирное_тяготение_Закон_всемирного_тяготения" class="category-link">
+                        1.15 Всемирное тяготение. Закон всемирного тяготения
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/115_Импульс_тела_векторная_физическая_величина_Имп" class="category-link">
+                        1.16 Импульс тела. Векторная природа импульса
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/116_Закон_сохранения_импульса_для_замкнутой_систем" class="category-link">
+                        1.17 Закон сохранения импульса для замкнутой системы
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/117_Механическая_работа_Формула_для_вычисления_раб" class="category-link">
+                        1.18 Механическая работа. Формулы расчета
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/118_Кинетическая_и_потенциальная_энергия_Формула_д" class="category-link">
+                        1.19 Кинетическая и потенциальная энергия. Формулы
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/119_Механическая_энергия_Закон_сохранения_механиче" class="category-link">
+                        1.20 Механическая энергия. Закон сохранения
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/120_Простые_механизмы_Золотое_правило_механики_Рыч" class="category-link">
+                        1.21 Простые механизмы. Золотое правило механики
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/121_Давление_твёрдого_тела_Формула_для_вычисления_" class="category-link">
+                        1.22 Давление твердого тела. Формулы расчета
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/122_Закон_Паскаля_Гидравлический_пресс" class="category-link">
+                        1.23 Закон Паскаля. Гидравлический пресс
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/123_Закон_Архимеда_Формула_для_определения_выталки" class="category-link">
+                        1.24 Закон Архимеда. Формула выталкивающей силы
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/124_Механические_колебания_Амплитуда_период_и_част" class="category-link">
+                        1.25 Механические колебания. Амплитуда, период, частота
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/128_Звук_Громкость_и_высота_звука_Отражение_звуков" class="category-link">
+                        1.26 Звук. Громкость и высота. Отражение звука
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/129_Практические_работы_Измерение_средней_плотност" class="category-link">
+                        1.27 Практические работы. Измерение плотности
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">2. Тепловые явления</h2>
+        <div class="topic-section">
+            <ul class="category-list">
+                <li class="category-item">
+                    <a href="/oge/2_ТЕПЛОВЫЕ_ЯВЛЕНИЯ" class="category-link">
+                        2.1 Тепловые явления (основной раздел)
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/21_Основные_положения_молекулярно_кинетической_тео" class="category-link">
+                        2.2 Основы молекулярно-кинетической теории
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/22_Движение_частиц_вещества_Связь_скорости_движени" class="category-link">
+                        2.3 Движение частиц вещества. Связь с температурой
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/25_Тепловое_равновесие" class="category-link">
+                        2.4 Тепловое равновесие
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/26_Внутренняя_энергия_Работа_и_теплопередача_как_с" class="category-link">
+                        2.5 Внутренняя энергия. Работа и теплопередача
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/27_Виды_теплопередачи_теплопроводность_конвекция_и" class="category-link">
+                        2.6 Виды теплопередачи: теплопроводность, конвекция, излучение
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/28_Нагревание_и_охлаждение_тел_Количество_теплоты_" class="category-link">
+                        2.7 Нагревание и охлаждение. Количество теплоты
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/210_Испарение_и_конденсация_Изменение_внутренней_э" class="category-link">
+                        2.8 Испарение и конденсация. Изменение энергии
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/212_Плавление_и_кристаллизация_Изменение_внутренне" class="category-link">
+                        2.9 Плавление и кристаллизация. Изменение энергии
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/213_Внутренняя_энергия_сгорания_топлива_Удельная_т" class="category-link">
+                        2.10 Энергия сгорания топлива. Удельная теплота
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/29_Закон_сохранения_энергии_в_тепловых_процессах_У" class="category-link">
+                        2.11 Закон сохранения энергии в тепловых процессах
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">3. Электромагнитные явления</h2>
+        <div class="topic-section">
+            <ul class="category-list">
+                <li class="category-item">
+                    <a href="/oge/3_ЭЛЕКТРОМАГНИТНЫЕ_ЯВЛЕНИЯ" class="category-link">
+                        3.1 Электромагнитные явления (основной раздел)
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/31_Электризация_тел_Два_вида_электрических_зарядов" class="category-link">
+                        3.2 Электризация тел. Виды зарядов
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/32_Взаимодействие_заряженных_тел_Закон_Кулона" class="category-link">
+                        3.3 Взаимодействие зарядов. Закон Кулона
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/33_Закон_сохранения_электрического_заряда" class="category-link">
+                        3.4 Закон сохранения электрического заряда
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/35_Носители_электрических_зарядов_Действие_электри" class="category-link">
+                        3.5 Носители зарядов. Действие поля
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/36_Постоянный_электрический_ток_Действия_электриче" class="category-link">
+                        3.6 Постоянный ток. Действия тока
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/37_Электрическое_сопротивление_Удельное_электричес" class="category-link">
+                        3.7 Электрическое сопротивление. Удельное сопротивление
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/38_Закон_Ома_для_участка_электрической_цепи39_Посл" class="category-link">
+                        3.8 Закон Ома для участка цепи
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/39_Последовательное_соединение_проводников_Паралле" class="category-link">
+                        3.9 Последовательное и параллельное соединение
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/310_Работа_и_мощность_электрического_тока" class="category-link">
+                        3.10 Работа и мощность тока
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/311_Закон_Джоуля_Ленца" class="category-link">
+                        3.11 Закон Джоуля-Ленца
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/312_Опыт_Эрстеда_Магнитное_поле_прямого_проводника" class="category-link">
+                        3.12 Опыт Эрстеда. Магнитное поле проводника
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/313_Магнитное_поле_постоянного_магнита_Взаимодейст" class="category-link">
+                        3.13 Магнитное поле постоянного магнита
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/314_Действие_магнитного_поля_на_проводник_с_током" class="category-link">
+                        3.14 Действие магнитного поля на проводник
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/315_Опыты_Фарадея_Явление_электромагнитной_индукци" class="category-link">
+                        3.15 Опыты Фарадея. Электромагнитная индукция
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/316_Практические_работы_Измерение_электрического_с" class="category-link">
+                        3.16 Практические работы. Измерение сопротивления
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/319_Электромагнитные_волны_Шкала_электромагнитных_" class="category-link">
+                        3.17 Электромагнитные волны. Шкала излучений
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/320_Лучевая_модель_света_Прямолинейное_распростран" class="category-link">
+                        3.18 Лучевая модель света. Прямолинейное распространение
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/321_Закон_отражения_света_Плоское_зеркало" class="category-link">
+                        3.19 Закон отражения света. Плоское зеркало
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/322_Преломление_света_Закон_преломления_света" class="category-link">
+                        3.20 Преломление света. Закон преломления
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/323_Дисперсия_света" class="category-link">
+                        3.21 Дисперсия света
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/324_Линза_Ход_лучей_в_линзе_Фокусное_расстояние_ли" class="category-link">
+                        3.22 Линзы. Ход лучей. Фокусное расстояние
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/325_Глаз_как_оптическая_система_Оптические_приборы" class="category-link">
+                        3.23 Глаз как оптическая система. Приборы
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/326_Практические_работы_Измерение_оптической_силы_" class="category-link">
+                        3.24 Практические работы. Измерение оптической силы
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">4. Квантовые явления</h2>
+        <div class="topic-section">
+            <ul class="category-list">
+                <li class="category-item">
+                    <a href="/oge/4_КВАНТОВЫЕ_ЯВЛЕНИЯ" class="category-link">
+                        4.1 Квантовые явления (основной раздел)
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/41_Радиоактивность_Альфа_бета_гамма_излучения_Реак" class="category-link">
+                        4.2 Радиоактивность. Виды излучений
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/42_Опыты_Резерфорда_по_рассеянию_альфа_частиц_План" class="category-link">
+                        4.3 Опыты Резерфорда. Планетарная модель атома
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/43_Состав_атомного_ядра_Изотопы" class="category-link">
+                        4.4 Состав ядра. Изотопы
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="/oge/45_Ядерные_реакции_Законы_сохранения_зарядового_и_" class="category-link">
+                        4.5 Ядерные реакции. Законы сохранения
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <div class="section">
-        <h2 class="section-title">Задания прошлых лет, не вошедшие в ОГЭ 2025</h2>
-        {% for topic in catalog.other_topics %}
-            <div class="topic-section">
-                <h3 class="topic-title">{{ topic.topic_id }}. {{ topic.topic_name }}</h3>
-                <ul class="category-list">
-                    {% for category in topic.categories %}
-                        <li class="category-item">
-                            <a href="/oge/{{ category.category_id }}" class="category-link">
-                                {{ category.category_name }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endfor %}
-    </div>
-</div>
-
-<style>
-    /* Основные стили */
-    body {
-        font-family: 'Roboto', 'Arial', sans-serif;
-        line-height: 1.6;
-        color: #333;
-    }
-
-    .container {
-        max-width: 800px; /* Уменьшил ширину для лучшей читаемости */
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    /* Заголовки */
-    .main-title {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-        color: #2c3e50;
-        font-weight: 700;
-    }
-
-    .section-title {
-        text-align: center;
-        font-size: 1.8rem;
-        margin: 40px 0 20px;
-        color: #3498db;
-        font-weight: 600;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-    }
-
-    .topic-title {
-        font-size: 1.4rem;
-        margin: 25px 0 15px;
-        color: #2c3e50;
-        font-weight: 500;
-        text-align: center;
-    }
-
-    /* Вертикальный список категорий */
-    .category-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 0 0 30px 0;
-    }
-
-    .category-item {
-        margin-bottom: 8px;
-        transition: all 0.3s ease;
-    }
-
-    .category-link {
-        display: block;
-        padding: 12px 20px;
-        text-decoration: none;
-        color: #2980b9;
-        font-weight: 400;
-        background-color: #f8f9fa;
-        border-radius: 5px;
-        transition: all 0.2s ease;
-    }
-
-    .category-link:hover {
-        color: #fff;
-        background-color: #3498db;
-        transform: translateX(5px);
-    }
-
-    /* Разделитель между темами */
-    .topic-section {
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #eee;
-    }
-
-    /* Адаптивность */
-    @media (max-width: 768px) {
+    <style>
+        /* Стили остаются без изменений */
+        body {
+            font-family: 'Roboto', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
         .container {
-            padding: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
         .main-title {
-            font-size: 2rem;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-weight: 700;
         }
-
         .section-title {
-            font-size: 1.5rem;
+            text-align: center;
+            font-size: 1.6rem;
+            margin: 40px 0 20px;
+            color: #3498db;
+            font-weight: 600;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
         }
-
-        .topic-title {
-            font-size: 1.2rem;
+        .category-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 30px 0;
         }
-
+        .category-item {
+            margin-bottom: 8px;
+        }
         .category-link {
-            padding: 10px 15px;
+            display: block;
+            padding: 12px 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            color: #2980b9;
+            text-decoration: none;
+            transition: all 0.2s ease;
         }
-    }
-</style>
-            </main>
+        .category-link:hover {
+            background-color: #e9ecef;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .main-title {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</div>
+</main>
 {% endblock %}
