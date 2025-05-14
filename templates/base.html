@@ -24,6 +24,9 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/100653730" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
     <title>{% block title %}{% endblock %}</title>
     <style>
         :root {
@@ -315,6 +318,16 @@
     </nav>
 
         {% block content %} {% endblock %}
+    <!-- Yandex.RTB R-A-15490109-2 -->
+<script>
+window.yaContextCb.push(() => {
+    Ya.Context.AdvManager.render({
+        "blockId": "R-A-15490109-2",
+        "type": "floorAd",
+        "platform": "desktop"
+    })
+})
+</script>
 
     <footer class="footer">
         <p>&copy; 2025 PhysicsPRO. Все права защищены.</p>
