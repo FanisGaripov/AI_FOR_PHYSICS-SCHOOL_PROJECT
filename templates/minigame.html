@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}Решение задачи{% endblock %}
+
+{% block description %}Решите физическую задачу и проверьте свой ответ{% endblock %}
+
+{% block content %}
+<main class="main-content">
+<div class="container">
+    <div class="task-card">
+        <div class="task-text">
+            <h2>Задача</h2>
+            <div class="task-content">
+                {{ zadacha }}
+            </div>
+        </div>
+
+        <form method="post" class="answer-form">
+            <div class="form-group">
+                <input type="text" id="answer" name="answer" class="form-control"
+                       placeholder="Введите ваш ответ..." required>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Проверить
+                </button>
+            </div>
+        </form>
+
+        {% if itog %}
+        <div class="result-message {% if 'Верно' in itog %}correct{% else %}incorrect{% endif %}">
+            <i class="fas {% if 'Правильно' in itog %}fa-check-circle{% else %}fa-times-circle{% endif %}"></i>
+            <span>{{ itog }}</span>
+        </div>
+        {% endif %}
+    </div>
+</div>
+</main>
+
+<style>
+    .task-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .task-text h2 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .task-content {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: rgba(106, 17, 203, 0.03);
+        border-radius: 8px;
+        border-left: 3px solid var(--primary-color);
+    }
+
+    .answer-form {
+        margin-top: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .form-control {
+        flex: 1;
+        padding: 0.8rem 1rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+
+    .form-control:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
+    }
+
+    .submit-btn {
+        background: var(--gradient);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0 1.5rem;
+        cursor: pointer;
+        transition: transform 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .result-message {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .result-message.correct {
+        background: rgba(40, 167, 69, 0.1);
+        color: #28a745;
+    }
+
+    .result-message.incorrect {
+        background: rgba(220, 53, 69, 0.1);
+        color: #dc3545;
+    }
+
+    @media (max-width: 600px) {
+        .task-card {
+            padding: 1.5rem;
+        }
+
+        .form-group {
+            flex-direction: column;
+        }
+
+        .submit-btn {
+            justify-content: center;
+            padding: 0.8rem;
+        }
+    }
+</style>
+{% endblock %}
