@@ -4,19 +4,97 @@
 {% block description %}PhysicsPRO специально собрал все лучшие онлайн опыты (https://efizika.ru){% endblock %}
 
 {% block content %}
+<style>
+    a {
+       text-decoration: none;
+       color: #a92aff;
+    }
+    .toc {
+       list-style: none;
+       counter-reset: li;
+    }
+
+    .toc li {
+        font-size: 20px;
+       position: relative;
+       margin-bottom: 20px;
+       padding-left: 50px;
+       line-height: 28px;
+       transition: .3s linear;
+    }
+
+    .toc li:last-child {
+       margin-bottom: 0;
+    }
+
+    .toc li:before {
+       counter-increment: li;
+       content: counters(li, "");
+       position: absolute;
+       top: 50%;
+       margin-top: -14px;
+       left: 0;
+       font-size: 14px;
+       width: 28px;
+       height: 28px;
+       text-align: center;
+       line-height: 28px;
+       color: white;
+       border-radius: 50%;
+       background: rgb(46, 43, 31);
+    }
+
+    .toc li:nth-child(2):before,
+    .toc li:nth-child(2):after {
+       background: rgba(46, 43, 31, 1);
+    }
+
+    .toc li:nth-child(3):before,
+    .toc li:nth-child(3):after {
+       background: rgba(46, 43, 31, 1);
+    }
+
+    .toc li:nth-child(4):before,
+    .toc li:nth-child(4):after {
+       background: rgba(46, 43, 31, 1);
+    }
+
+    .toc li:nth-child(5):before,
+    .toc li:nth-child(5):after {
+       background: rgba(46, 43, 31, 1);
+    }
+
+    .toc li:after {
+       content: "";
+       position: absolute;
+       width: 8px;
+       height: 8px;
+       border-radius: 50%;
+       background: rgb(46, 43, 31);
+       top: 50%;
+       left: 34px;
+       margin-top: -4px;
+       opacity: 0;
+       transition: .3s linear;
+    }
+
+    .toc li:hover:after {
+       opacity: 1;
+    }
+</style>
 <main class="main-content">
     <div class="container">
     <h1>Каталог физических экспериментов</h1>
     <h2 class="section-title">Содержание</h2>
     <nav>
-            <ul class="nav-list">
-                <li><a href="#Механика">1.Механика</a></li>
-                <li><a href="#Молекулярная физика">2.Молекулярная физика:</a></li>
-                <li><a href="#Электричество и магнетизм">3.Электричество и магнетизм</a></li>
-                <li><a href="#Колебания и волны">4.Колебания и волны</a></li>
+            <ol class="toc">
+                <li><a href="#Механика">Механика</a></li>
+                <li><a href="#Молекулярная физика">Молекулярная физика:</a></li>
+                <li><a href="#Электричество и магнетизм">Электричество и магнетизм</a></li>
+                <li><a href="#Колебания и волны">Колебания и волны</a></li>
                 <li><a href="#Оптика">5.Оптика</a></li>
-                <li><a href="#Квантовая и атомная физика">6.Квантовая и атомная физика</a></li>
-            </ul>
+                <li><a href="#Квантовая и атомная физика">Квантовая и атомная физика</a></li>
+            </ol>
         </nav>
 
     {% for category, exps in experiments.items() %}
@@ -117,6 +195,44 @@
         font-size: 1.4rem;
     }
 </style>
+        <style>
+    /* Добавляем стили для кнопки 'наверх' */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        display: none; /* Скрываем кнопку по умолчанию */
+        transition: background-color 0.3s;
+    }
+    .scroll-to-top:hover {
+        background-color: #2980b9;
+    }
+</style>
+
+<button class="scroll-to-top" onclick="scrollToTop()">Наверх ↑</button>
+
+<script>
+    // Показать кнопку при прокрутке
+    window.onscroll = function() {
+        const button = document.querySelector('.scroll-to-top');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            button.style.display = 'block';
+        } else {
+            button.style.display = 'none';
+        }
+    };
+
+    // Функция прокрутки к верху страницы
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
 </div>
 </main>
 {% endblock %}
