@@ -11,12 +11,15 @@ from others import labs
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 
+
 @app.route('/')
 def hello():
+    # главная страница, которую видит пользователь при входе
     return render_template('main.html')
 
 
 def load_tasks_from_files(number):
+    # загрузка заданий ФИПИ из файлов
     catalog = {}
     if number == 1:
         tasks_dir = 'База заданий ОГЭ'
@@ -36,31 +39,37 @@ def load_tasks_from_files(number):
     return catalog
 
 
+# каталоги заданий огэ и егэ помещаются в переменные для дальнейшей передачи в функциях каталогов
 oge_catalog = load_tasks_from_files(1)
 ege_catalog = load_tasks_from_files(2)
 
 
 @app.route('/physics-chatbot', methods=['GET', 'POST'])
 def index():
+    # страница с чат-ботом
     return render_template('index.html')
 
 
 @app.route('/contact')
 def contact():
+    # страница с моими контактами, функционально не несет какой-то пользы
     return render_template('contact.html')
 
 
 @app.route('/ege', methods=['GET', 'POST'])
 def EGE_catalog():
+    # каталог егэ
     return render_template('ege_catalog.html', catalog=ege_catalog)
 
 
 @app.route('/oge', methods=['GET', 'POST'])
 def OGE_catalog():
+    # каталог огэ
     return render_template('oge_catalog.html', catalog=oge_catalog)
 
 
 def parse_experiments(text):
+    # функция для парсинга экспериментов с efizika.ru
     categories = {}
     current_category = None
 
@@ -112,6 +121,7 @@ def ya():
 
 @app.route('/experiments')
 def experiments():
+    # страница с экспериментами
     stroka = labs
     experiments_data = parse_experiments(stroka)
     total_experiments = sum(len(exps) for exps in experiments_data.values())
@@ -122,6 +132,7 @@ def experiments():
 
 
 def process_catalog(raw_catalog):
+    # я хз че это, видимо мне это чатгпт написал и она вроде нигде не используется :))))
     main_topics = []
     other_topics = []
 
@@ -142,17 +153,20 @@ def process_catalog(raw_catalog):
 
 @app.route('/ege/<category>')
 def EGE_zadaniya(category):
+    # задания егэ
     tasks = ege_catalog.get(category, [])
     return render_template('EGE.html', category=category, tasks=tasks)
 
 
 @app.route('/oge/<category>')
 def OGE_zadaniya(category):
+    # задания огэ
     tasks = oge_catalog.get(category, [])
     return render_template('OGE.html', category=category, tasks=tasks)
 
 
 def get_catalog(ege):
+    # функция получения каталог с решу егэ, взята была из библиотеки sdamgia, но в настоящий момент не используется по причине авторских прав на задачи
     if ege is True:
         doujin_page = requests.get(
             f'https://phys-ege.sdamgia.ru/prob_catalog')
@@ -198,6 +212,7 @@ def get_catalog(ege):
 
 
 def get_category_by_id(categoryid, ege, page=1):
+    # тоже самое, что и с предыдущей функцией
     if ege is True:
         doujin_page = requests.get(
             f'https://phys-ege.sdamgia.ru/test?&filter=all&theme={categoryid}&page={page}')
@@ -214,37 +229,21 @@ def get_category_by_id(categoryid, ege, page=1):
     return modified_text
 
 
-# print(get_catalog())
-# print(get_category_by_id(204))
-
-# html_content = str(get_category_by_id(204))
-# soup = BeautifulSoup(html_content, 'html.parser')
-#
-# for script in soup(["script", "style"]):  # Удаляем скрипты и стили
-#     script.decompose()
-#
-# # Извлекаем только текст и изображения
-# text_and_images = []
-# for element in soup.find_all(['p', 'img']):
-#     if element.name == 'p':
-#         text_and_images.append(element.get_text(strip=True))
-#     elif element.name == 'img':
-#         text_and_images.append(element['src'])  # Добавляем только ссылку на изображение
-
-# # Выводим результат
-# for item in text_and_images:
-#     print(item)
-
-
 @app.route('/spisok-formul-po-fizike')
 def spisok_formul_po_fizike():
+    # страница со всеми формулами по физике. для написания формул использован mathjax(js)
     return render_template('spisok_formul.html')
 
 
 @app.route('/aboutme')
 def aboutme():
+    # страница обо мне, тоже функционально не несет никакой пользы
     return render_template('aboutme.html')
 
+
+# а дальше начинаются 3 функции для работы с ИИ:
+# 1 и 2 Занимаются потоковым выводом
+# 3 получает ответ от ИИ, тоже в потоковом виде
 
 @app.route('/stream')
 def stream():
@@ -332,7 +331,9 @@ def generate_problem():
 
 
 
+# материалы по физике
 # основные темы: механика, термодинамика, электродинамика, оптика, квантовая физика, ядерная физика
+# и страницы этих тем
 
 @app.route('/materials')
 def materials():
