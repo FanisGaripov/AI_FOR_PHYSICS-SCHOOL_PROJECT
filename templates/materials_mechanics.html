@@ -5,6 +5,35 @@
 {% block description %}{% endblock %}
 
 {% block content %}
+<style>
+        .explore-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        border-radius: 50px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+    }
+
+    .explore-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
+    }
+
+    .explore-btn i {
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .explore-btn:hover i {
+        transform: translateX(3px);
+    }
+</style>
 <main class="main-content">
 <div class="container">
 <h1>Основные понятия и определения механики</h1>
@@ -54,5 +83,7 @@ F = G·(m₁·m₂) / r², где G — гравитационная посто�
 5. <strong>Закон сохранения импульса:</strong> В замкнутой системе суммарный импульс остаётся постоянным.<br>
 
 6. <strong>Закон сохранения энергии:</strong> В замкнутой системе полная механическая энергия сохраняется (при отсутствии потерь на трение и другие внешние воздействия).<br></p>
-</div></main>
+<br><a href="/materials"><div class="explore-btn">
+                    Назад к материалам <i class="fas fa-arrow-left"></i>
+</div></a></div></main>
 {% endblock %}
