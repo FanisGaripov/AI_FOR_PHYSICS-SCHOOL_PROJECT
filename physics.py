@@ -56,6 +56,11 @@ def contact():
     return render_template('contact.html')
 
 
+@app.route('/glossarium')
+def glossarium():
+    return render_template('glossarium.html')
+
+
 @app.route('/ege', methods=['GET', 'POST'])
 def EGE_catalog():
     # каталог егэ
