@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, Response, stream_with_context, session
+from flask import Flask, render_template, request, Response, stream_with_context, session, send_from_directory
 import g4f
 import time
 import requests, re
@@ -59,6 +59,48 @@ def contact():
 @app.route('/glossarium')
 def glossarium():
     return render_template('glossarium.html')
+
+
+@app.route('/simulations', methods=['GET', 'POST'])
+def simulations():
+    experiments_data = {
+        'blackbody-spectrum_ru': 'Спектр абсолютно чёрного тела',
+        'build-a-nucleus_ru': 'Построение атомного ядра',
+        'build-an-atom_ru': 'Построение атома',
+        'buoyancy-basics_en': 'Основы плавучести',
+        'color-vision_ru': 'Цветовое зрение',
+        'density_ru': 'Плотность',
+        'diffusion_ru': 'Диффузия',
+        'faradays-electromagnetic-lab_en': 'Лаборатория электромагнетизма Фарадея',
+        'gas-properties_ru': 'Свойства газов',
+        'gases-intro_ru': 'Введение в газы',
+        'generator_en': 'Генератор',
+        'geometric-optics-basics_en': 'Геометрическая оптика (основы)',
+        'magnets-and-electromagnets_en': 'Магниты и электромагниты',
+        'masses-and-springs_ru': 'Массы и пружины',
+        'models-of-the-hydrogen-atom_en': 'Модели атома водорода',
+        'ohms-law_ru': 'Закон Ома',
+        'pendulum-lab_ru': 'Лаборатория маятника',
+        'resistance-in-a-wire_ru': 'Сопротивление в проводе',
+        'sound-waves_en': 'Звуковые волны',
+        'states-of-matter_ru': 'Агрегатные состояния вещества',
+        'under-pressure_ru': 'Под давлением'
+    }
+
+    # Для обратной совместимости сохраняем и исходный список
+    all_experiments = list(experiments_data.keys())
+
+    return render_template(
+        'simulations.html',
+        all_experiments=all_experiments,
+        experiments_data=experiments_data
+    )
+
+
+@app.route('/simulations/<exp_name>', methods=['GET', 'POST'])
+def simulation_page(exp_name):
+    # страница для каждого эксперимента(отдельная)
+    return send_from_directory('templates/simulations', f'{exp_name}.html')
 
 
 @app.route('/ege', methods=['GET', 'POST'])
@@ -315,10 +357,13 @@ def generate_problem():
         answer = ''
         zadacha = ''
         client = g4f.Client()
+        razdel_spisok = ['механике', 'термодинамике', 'электродинамике', 'оптике', 'квантовой физике', 'ядерной физике']
+        razdel_number = random.randint(0, 5)
+        razdel = razdel_spisok[razdel_number]
         chat_completion = client.chat.completions.create(model="gpt-4",
                                                          messages=[{"role": "system",
                                                                     "content": "Ты помощник, который генерирует простые задачи по физике. Тебе нужно выслать сообщение вот в таком формате: Задача: (сюда пишешь задачу), ответ:(сюда пишешь ответ, только число без пробелов и других знаков). Решение НЕ НУЖНО. Больше ничего не пиши. Вот темы, на которые ты можешь генерировать задачи: механика, термодинамика, электродинамика, оптика, квантовая физика, ядерная физика"},
-                                                                   {"role": "user", "content": 'Сгенерируй задачу по кинематике'}])
+                                                                   {"role": "user", "content": f'Сгенерируй задачу по {razdel}'}])
         if chat_completion.choices:
             zadacha = chat_completion.choices[0].message.content or ""
             if 'Ответ' in zadacha:
@@ -334,6 +379,9 @@ def generate_problem():
         print(f"Ошибка при генерации задачи: {str(e)}")
 
 
+# @app.route('/test', methods=['GET', 'POST'])
+# def random_test_api():
+#     test = requests.get('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
 
 
 # материалы по физике
